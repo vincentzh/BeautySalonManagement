@@ -151,6 +151,8 @@
     <Compile Include="CastleWindsor\ComponentRegistrar.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Queries\CustomerQuery.cs" />
+    <Compile Include="Controllers\Queries\ICustomerQuery.cs" />
     <Compile Include="Controllers\RouteRegistrar.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -184,12 +186,15 @@
       <Project>{C9AAC14B-E695-4508-83B7-ACB8FC5A7284}</Project>
       <Name>BeautySalonManagement.Tasks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj">
+      <Project>{9CA71118-CD5C-4FA4-A200-7A050F529B67}</Project>
+      <Name>CommonLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="NHibernate.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\Queries\" />
     <Folder Include="Controllers\ViewModels\" />
     <Folder Include="Scripts\" />
   </ItemGroup>

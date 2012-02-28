@@ -127,7 +127,6 @@
     <Compile Include="..\..\Common\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="CustomerTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BeautySalonManagement.Domain\BeautySalonManagement.Domain.csproj">

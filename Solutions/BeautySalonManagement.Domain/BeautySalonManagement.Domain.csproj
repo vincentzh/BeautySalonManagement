@@ -106,7 +106,6 @@
     <Compile Include="..\..\Common\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Contracts\Tasks\ICustomerTask.cs" />
     <Compile Include="Contracts\Tasks\IEmployeeTask.cs" />
     <Compile Include="Contracts\Tasks\IPersonTask.cs" />
     <Compile Include="Peoples\ContactInfo.cs" />

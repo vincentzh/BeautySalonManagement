@@ -28,6 +28,7 @@ namespace BeautySalonManagement.Tests.BeautySalonManagement.Data.Domain
 			
 			this.productRepository.Save(p1);
 			this.productRepository.Save(p2);
+		
 			Assert.IsNotNull(productRepository.Get(p1.Id));
 			Assert.IsNotNull(productRepository.Get(p2.Id));
 		}

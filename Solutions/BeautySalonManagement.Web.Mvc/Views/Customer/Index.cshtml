@@ -1,9 +1,17 @@
-﻿@using MvcContrib.UI.Grid
+﻿
+@using MvcContrib.UI.Grid
 @using MvcContrib.UI.Pager
 @model MvcContrib.Pagination.IPagination<BeautySalonManagement.Domain.Peoples.Customer>
+@{
+    ViewBag.Title = "CustomerList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 @Html.Grid(Model).Columns(column=>
 {
 	column.For(x => x.Id).Sortable(true);
 	column.For(x => x.Name).Sortable(true);
 }).Sort(ViewBag.Sort)
-@Html.Pager(Model)
+@Html.Pager(Model).First("首页").Last("尾页").Next("下一页").Previous("上一页")
+
+
+<h2>Index</h2>

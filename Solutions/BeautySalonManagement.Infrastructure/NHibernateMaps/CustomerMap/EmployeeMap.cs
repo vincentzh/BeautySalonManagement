@@ -15,6 +15,7 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps.CustomerMap
 		public void Override(AutoMapping<Employee> mapping)
 		{
 			mapping.Table("tblEmployees");
+			mapping.UseUnionSubclassForInheritanceMapping();
 		}
 
 		#endregion

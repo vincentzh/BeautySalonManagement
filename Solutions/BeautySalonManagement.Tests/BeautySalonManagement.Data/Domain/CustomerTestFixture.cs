@@ -39,6 +39,7 @@ namespace BeautySalonManagement.Tests.BeautySalonManagement.Data.Domain
 				customer.Password = "111";
 				customer.Salt = DateTime.Now.ToBinary().ToString();
 				productRepository.Save(customer);
+				FlushSessionAndEvict(customer);
 			}
 		}
 	}
