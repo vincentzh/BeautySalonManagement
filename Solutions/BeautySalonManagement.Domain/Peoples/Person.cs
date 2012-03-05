@@ -24,6 +24,5 @@ namespace BeautySalonManagement.Domain.Peoples
 		public virtual string MobilePhone { get; set; }
 		public virtual string Address { get; set; }
 		public virtual DateTime CreateDate { get; set; }
-
 	}
 }
