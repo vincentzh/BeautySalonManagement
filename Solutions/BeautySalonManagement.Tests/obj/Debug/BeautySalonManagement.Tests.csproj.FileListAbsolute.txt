@@ -44,7 +44,8 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonMan
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tests\bin\Debug\log4net.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tests\obj\Debug\BeautySalonManagement.Tests.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tests\obj\Debug\BeautySalonManagement.Tests.pdb
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tests\bin\Debug\BeautySalonManagement.Tasks.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tests\bin\Debug\CommonLib.dll
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tests\bin\Debug\BeautySalonManagement.Tasks.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tests\bin\Debug\CommonLib.pdb
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tests\bin\Debug\EncryptionClassLibrary.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tests\bin\Debug\AutoMapper.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tests\bin\Debug\AutoMapper.xml

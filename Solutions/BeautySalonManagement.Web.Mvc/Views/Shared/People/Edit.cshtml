@@ -1,0 +1,37 @@
+﻿@model BeautySalonManagement.Web.Mvc.Controllers.ViewModels.PersonViewModel
+<script>
+    $(document).ready(function () {
+        $('.date').datepicker({ dateFormat:"yy/mm/dd" ,  changeMonth: true ,  changeYear: true ,  yearRange: "c-60:c" });
+    });
+</script>
+@if (Model != null)
+{
+	<li>@Html.LabelFor(people => people.Id)
+		<div>@Html.DisplayFor(people => people.Id)</div>
+	</li>
+}
+<li>
+    @Html.LabelFor(people => people.Name)
+    <div>
+        @Html.TextBoxFor(people => people.Name)
+    </div>
+</li>
+<li>
+	@Html.LabelFor(people => people.Password)
+	<div>
+		@Html.PasswordFor(people => people.Password)
+	</div>
+</li>
+<li>
+	@Html.LabelFor(people => people.ConfirmPassword)
+
+	<div>
+		@Html.PasswordFor(people => people.ConfirmPassword)
+	</div>
+</li>
+<li>
+	@Html.LabelFor(people=>people.Birthday)
+	<div>
+        @Html.TextBoxFor(people=>people.Birthday,new {@class="date",@readonly="readonly"})
+	</div>
+</li>

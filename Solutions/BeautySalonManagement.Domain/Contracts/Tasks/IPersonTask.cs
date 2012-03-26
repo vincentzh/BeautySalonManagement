@@ -5,7 +5,7 @@ namespace BeautySalonManagement.Domain.Contracts.Tasks
 {
 	internal interface IPersonTask
 	{
-		ICollection<Person> GetAll();
-		Person Get(int Id);
+		ICollection<People> GetAll();
+		People Get(int Id);
 	}
 }

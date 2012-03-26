@@ -6,3 +6,12 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\obj\Debug\ResolveAssemblyReference.cache
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\obj\Debug\CommonLib.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\obj\Debug\CommonLib.pdb
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\Newtonsoft.Json.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\SharpArch.Domain.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\Newtonsoft.Json.pdb
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\Newtonsoft.Json.xml
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\SharpArch.Domain.pdb
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\EncryptionClassLibrary.dll

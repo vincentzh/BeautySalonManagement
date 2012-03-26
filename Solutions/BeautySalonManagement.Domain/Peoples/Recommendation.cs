@@ -6,8 +6,8 @@ namespace BeautySalonManagement.Domain.Peoples
 	public class Recommendation : Entity
 	{
 		[Required]
-		public virtual Person Introduce { get; set; }
+		public virtual People Introduce { get; set; }
 		[Required]
-		public virtual Person Rookie { get; set; }
+		public virtual People Rookie { get; set; }
 	}
 }

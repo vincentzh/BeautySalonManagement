@@ -55,3 +55,8 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.Bea
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\CommonLib.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\log4net.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\BeautySalonManagement.Infrastructure.pdb
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\EncryptionClassLibrary.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\AutoMapper.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\AutoMapper.xml
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Machine.Specifications.Clr4.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Machine.Specifications.Mvc.dll

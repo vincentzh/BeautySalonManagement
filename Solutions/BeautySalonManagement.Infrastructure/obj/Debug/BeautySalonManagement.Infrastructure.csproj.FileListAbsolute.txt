@@ -28,3 +28,6 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonMan
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\Castle.Windsor.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\CommonServiceLocator.WindsorAdapter.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\SharpArch.Web.Mvc.pdb
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\CommonLib.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\EncryptionClassLibrary.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\CommonLib.pdb

@@ -12,6 +12,7 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps.CustomerMap
 		{
 			mapping.Table("tblCustomers");
 			mapping.UseUnionSubclassForInheritanceMapping();
+			mapping.Map(x => x.CustomerCardNo).UniqueKey("CustomerCardNo").Not.Nullable();
 		}
 
 		#endregion

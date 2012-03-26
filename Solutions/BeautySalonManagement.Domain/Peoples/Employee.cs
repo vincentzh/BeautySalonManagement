@@ -7,7 +7,7 @@ using SharpArch.Domain.DomainModel;
 
 namespace BeautySalonManagement.Domain.Peoples
 {
-	public class Employee : Person
+	public class Employee : People
 	{
 		public virtual ContactInfo ContactInfo { get; set; }
 	}

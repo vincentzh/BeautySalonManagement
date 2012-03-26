@@ -137,12 +137,17 @@
     <Compile Include="NHibernateMaps\AutoPersistenceModelGenerator.cs" />
     <Compile Include="NHibernateMaps\CustomerMap\CustomerMap.cs" />
     <Compile Include="NHibernateMaps\CustomerMap\EmployeeMap.cs" />
+    <Compile Include="NHibernateMaps\CustomerMap\PeopleMap.cs" />
     <Compile Include="NHibernateMaps\CustomerMap\PermissionItemMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BeautySalonManagement.Domain\BeautySalonManagement.Domain.csproj">
       <Project>{8DEF56CD-601E-443C-9DCE-C4EC54C0B6A6}</Project>
       <Name>BeautySalonManagement.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj">
+      <Project>{9CA71118-CD5C-4FA4-A200-7A050F529B67}</Project>
+      <Name>CommonLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

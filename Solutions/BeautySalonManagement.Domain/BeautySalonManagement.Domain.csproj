@@ -111,7 +111,8 @@
     <Compile Include="Peoples\ContactInfo.cs" />
     <Compile Include="Peoples\Customer.cs" />
     <Compile Include="Peoples\Employee.cs" />
-    <Compile Include="Peoples\Person.cs" />
+    <Compile Include="Peoples\Gender.cs" />
+    <Compile Include="Peoples\People.cs" />
     <Compile Include="Peoples\Recommendation.cs" />
     <Compile Include="Permissions\PermissionDescription.cs" />
     <Compile Include="Permissions\PermissionBehavior.cs" />
@@ -138,7 +139,12 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj">
+      <Project>{9CA71118-CD5C-4FA4-A200-7A050F529B67}</Project>
+      <Name>CommonLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
       <SubType>Designer</SubType>
