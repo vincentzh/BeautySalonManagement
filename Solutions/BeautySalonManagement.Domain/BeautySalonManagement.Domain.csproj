@@ -80,6 +80,12 @@
     <Reference Include="MindHarbor.CollectionWrappers">
       <HintPath>..\..\MindLib\MindHarbor.CollectionWrappers.dll</HintPath>
     </Reference>
+    <Reference Include="MindHarbor.GenClassLib">
+      <HintPath>..\..\MindLib\MindHarbor.GenClassLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MindHarbor.SingletonUtil">
+      <HintPath>..\..\MindLib\MindHarbor.SingletonUtil.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\Packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
@@ -91,6 +97,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -108,6 +115,8 @@
     </Compile>
     <Compile Include="Contracts\Tasks\IEmployeeTask.cs" />
     <Compile Include="Contracts\Tasks\IPersonTask.cs" />
+    <Compile Include="DomainSession.cs" />
+    <Compile Include="DomainSetting.cs" />
     <Compile Include="Peoples\ContactInfo.cs" />
     <Compile Include="Peoples\Customer.cs" />
     <Compile Include="Peoples\Employee.cs" />
