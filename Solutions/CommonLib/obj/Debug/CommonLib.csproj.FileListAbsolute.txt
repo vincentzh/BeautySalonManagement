@@ -1,6 +1,5 @@
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\CommonLib.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\CommonLib.pdb
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\MvcContrib.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\NHibernate.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\NHibernate.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\obj\Debug\ResolveAssemblyReference.cache
@@ -15,3 +14,9 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\Newtonsoft.Json.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\SharpArch.Domain.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\EncryptionClassLibrary.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\Iesi.Collections.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\Iesi.Collections.xml
+d:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\MindHarbor.GenClassLib.dll
+d:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\MindHarbor.SingletonUtil.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\log4net.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\CommonLib\bin\Debug\log4net.xml

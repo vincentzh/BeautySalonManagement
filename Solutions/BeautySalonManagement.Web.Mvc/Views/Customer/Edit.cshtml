@@ -1,0 +1,21 @@
+﻿@model BeautySalonManagement.Web.Mvc.Controllers.ViewModels.CustomerViewModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>编辑客户资料</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    @Html.AntiForgeryToken()
+                             
+	<div class="control-group">
+		@Html.LabelFor(customer => customer.CustomerCardNo)
+		@Html.TextBoxFor(customer => customer.CustomerCardNo, new {@readonly = "true"})
+	</div>
+	@Html.Partial("People/Edit")
+    <div class="control-group">
+		@Html.SubmitButton("Save","保存",new {@class="btn btn-primary"}) @(Html.ActionLink<CustomerController>(x=>x.Index(null,null),"取消",new{@class="btn"}))</div>
+}

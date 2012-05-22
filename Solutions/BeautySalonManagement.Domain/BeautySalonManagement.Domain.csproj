@@ -86,6 +86,15 @@
     <Reference Include="MindHarbor.SingletonUtil">
       <HintPath>..\..\MindLib\MindHarbor.SingletonUtil.dll</HintPath>
     </Reference>
+    <Reference Include="MvcContrib">
+      <HintPath>..\..\Packages\MvcContrib.Mvc3-ci.3.0.100.0\lib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.FluentHtml">
+      <HintPath>..\..\Packages\MvcContrib.Mvc3.FluentHtml-ci.3.0.100.0\lib\MvcContrib.FluentHtml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Newtonsoft.Json.4.5.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\Packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
@@ -113,23 +122,26 @@
     <Compile Include="..\..\Common\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Contracts\Tasks\IEmployeeTask.cs" />
-    <Compile Include="Contracts\Tasks\IPersonTask.cs" />
+    <Compile Include="Contracts\Tasks\ICustomerTasks.cs" />
+    <Compile Include="Contracts\Tasks\IEmployeeTasks.cs" />
+    <Compile Include="Contracts\Tasks\IPersonTasks.cs" />
     <Compile Include="DomainSession.cs" />
     <Compile Include="DomainSetting.cs" />
     <Compile Include="Peoples\ContactInfo.cs" />
     <Compile Include="Peoples\Customer.cs" />
     <Compile Include="Peoples\Employee.cs" />
     <Compile Include="Peoples\Gender.cs" />
+    <Compile Include="Interfaces\IEntityHasPassword.cs" />
     <Compile Include="Peoples\People.cs" />
     <Compile Include="Peoples\Recommendation.cs" />
-    <Compile Include="Permissions\PermissionDescription.cs" />
-    <Compile Include="Permissions\PermissionBehavior.cs" />
+    <Compile Include="Permissions\ActionNameEnum.cs" />
+    <Compile Include="Permissions\ControllerActionRelation.cs" />
+    <Compile Include="Permissions\ControllerNameEnum.cs" />
+    <Compile Include="Permissions\IPermissionRepository.cs" />
     <Compile Include="Permissions\PermissionGroup.cs" />
-    <Compile Include="Permissions\PermissionItem.cs" />
-    <Compile Include="Permissions\PermissionGroupAndItemRelationship.cs" />
-    <Compile Include="UserType\PermissionBehaviorUserType.cs" />
-    <Compile Include="UserType\PermissionDescriptionUserType.cs" />
+    <Compile Include="Permissions\PermissionGroupAndControllerActionRelation.cs" />
+    <Compile Include="Permissions\PermissionRepository.cs" />
+    <Compile Include="UserType\GenderUserType.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -162,6 +174,7 @@
   <ItemGroup>
     <Content Include="README.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

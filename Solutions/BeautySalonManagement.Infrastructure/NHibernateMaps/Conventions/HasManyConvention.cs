@@ -14,6 +14,7 @@
 			instance.Key.ForeignKey(instance.EntityType.Name+"_"+instance.ChildType.Name+"_FK");
             instance.Cascade.AllDeleteOrphan();
             instance.Inverse();
+        	instance.LazyLoad();
         }
     }
 }

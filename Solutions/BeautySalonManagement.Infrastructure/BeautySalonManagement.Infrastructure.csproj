@@ -89,11 +89,16 @@
     <Reference Include="MindHarbor.ClassEnum">
       <HintPath>..\..\MindLib\MindHarbor.ClassEnum.dll</HintPath>
     </Reference>
-    <Reference Include="MvcContrib">
-      <HintPath>..\..\Packages\MvcContrib.Mvc3-ci.3.0.96.0\lib\MvcContrib.dll</HintPath>
+    <Reference Include="MvcContrib, Version=3.0.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\MvcContrib.Mvc3-ci.3.0.100.0\lib\MvcContrib.dll</HintPath>
     </Reference>
-    <Reference Include="MvcContrib.FluentHtml">
-      <HintPath>..\..\Packages\MvcContrib.Mvc3.FluentHtml-ci.3.0.96.0\lib\MvcContrib.FluentHtml.dll</HintPath>
+    <Reference Include="MvcContrib.FluentHtml, Version=3.0.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\MvcContrib.Mvc3.FluentHtml-ci.3.0.100.0\lib\MvcContrib.FluentHtml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Newtonsoft.Json.4.5.3\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\Packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
@@ -138,7 +143,6 @@
     <Compile Include="NHibernateMaps\CustomerMap\CustomerMap.cs" />
     <Compile Include="NHibernateMaps\CustomerMap\EmployeeMap.cs" />
     <Compile Include="NHibernateMaps\CustomerMap\PeopleMap.cs" />
-    <Compile Include="NHibernateMaps\CustomerMap\PermissionItemMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BeautySalonManagement.Domain\BeautySalonManagement.Domain.csproj">

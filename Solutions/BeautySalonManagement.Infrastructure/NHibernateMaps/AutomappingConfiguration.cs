@@ -35,5 +35,6 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps
 		{
 			return type.In(typeof (ContactInfo));
 		}
+		
     }
 }

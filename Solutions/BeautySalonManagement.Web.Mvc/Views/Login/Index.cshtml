@@ -1,0 +1,26 @@
+﻿@model BeautySalonManagement.Web.Mvc.Controllers.ViewModels.LoginViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_IndexLayout.cshtml";
+}
+
+<div style="margin: 0 auto; ">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+		<div class="control-group">
+			@Html.LabelFor(x => x.EmployeeNo)
+			@Html.TextBoxFor(x => x.EmployeeNo)
+		</div>
+		<div class="control-group">
+			@Html.LabelFor(x => x.Password)
+            @Html.PasswordFor(x => x.Password)
+		</div>
+		<div class="control-group">
+			@Html.SubmitButton("Login", "登录", new { @class = "btn btn-primary" })
+		</div>
+      
+    }
+</div>
+  

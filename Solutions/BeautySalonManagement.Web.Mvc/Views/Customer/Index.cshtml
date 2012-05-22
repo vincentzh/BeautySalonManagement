@@ -1,18 +1,24 @@
 ﻿
 @using MvcContrib.UI.Grid
-@using MvcContrib.UI.Pager
+@using MvcPaging
 @model MvcContrib.Pagination.IPagination<BeautySalonManagement.Domain.Peoples.Customer>
 @{
-    ViewBag.Title = "CustomerList";
+    ViewBag.Title = "客户列表";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@Html.Grid(Model).Columns(column=>
+<h2>客户列表</h2>
+<div align="right">
+	@(Html.ActionLink<CustomerController>(x => x.Create(), "新建客户", new { @class = "btn btn-primary" }))</div>
+@Html.Grid(Model).Empty("没有数据").Attributes(@class => @class = "table table-striped").Columns(column=>
 {
-	column.For(x => x.Id).Sortable(true);
-	column.For(x => x.Name).Sortable(true);
+	column.For(x => x.Id).Visible(false).Sortable(true);
+	column.For(x => x.CustomerCardNo).Named("会员卡号").Sortable(true);
+	column.For(x => x.Name).Named("姓名").Sortable(true);
+	column.For(x => x.Gender.Desc).Named("性别").Sortable(true);
+	column.For(x => x.Birthday).Named("出生日期").Format("{0:yyyy/MM/dd}").Sortable(true);
+    column.For(x => x.CreateDate).Named("入会时间").Format("{0:yyyy/MM/dd HH:mm}").Sortable(true);
+    column.Custom(x => @Html.ActionLink<CustomerController>(action => action.Edit(x.Id), "编辑"));
 }).Sort(ViewBag.Sort)
-@Html.Pager(Model).First("首页").Last("尾页").Next("下一页").Previous("上一页")
+@Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItems).Options(x => x.MaxNrOfPages(5).DisplayTemplate("BootstrapPagination"))
 
 
-<h2>Index</h2>
-@(Html.ActionLink<CustomerController>(x=>x.Create(),"Add"))

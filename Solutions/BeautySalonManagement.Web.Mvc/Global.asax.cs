@@ -73,7 +73,7 @@
 
             ModelBinders.Binders.DefaultBinder = new SharpModelBinder();
 
-            ModelValidatorProviders.Providers.Add(new ClientDataTypeModelValidatorProvider());
+            //ModelValidatorProviders.Providers.Add(new ClientDataTypeModelValidatorProvider());
 
             this.InitializeServiceLocator();
 

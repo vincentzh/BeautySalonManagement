@@ -5,6 +5,7 @@ using BeautySalonManagement.Domain.Peoples;
 using BeautySalonManagement.Infrastructure.NHibernateMaps.Conventions;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Conventions;
+using FluentNHibernate.Conventions.Helpers;
 using SharpArch.Domain.DomainModel;
 using SharpArch.NHibernate.FluentNHibernate;
 
@@ -27,7 +28,7 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps
 
 			mappings.Conventions.Setup(GetConventions());
 			mappings.UseOverridesFromAssemblyOf<AutoPersistenceModelGenerator>();
-			//mappings.WriteMappingsTo(@"C:\mappings");
+			mappings.WriteMappingsTo(@"C:\mappings");
 			return mappings;
 		}
 

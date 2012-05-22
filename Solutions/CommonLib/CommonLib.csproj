@@ -36,14 +36,20 @@
     <Reference Include="EncryptionClassLibrary">
       <HintPath>..\..\MindLib\EncryptionClassLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\Packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\..\Packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
-    <Reference Include="MvcContrib">
-      <HintPath>..\..\Packages\MvcContrib.Mvc3-ci.3.0.96.0\lib\MvcContrib.dll</HintPath>
+    <Reference Include="MindHarbor.GenClassLib">
+      <HintPath>..\BeautySalonManagement.Web.Mvc\Bin\MindHarbor.GenClassLib.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\Packages\Newtonsoft.Json.4.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="MindHarbor.SingletonUtil">
+      <HintPath>..\BeautySalonManagement.Web.Mvc\Bin\MindHarbor.SingletonUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\Newtonsoft.Json.4.5.3\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\Packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
@@ -55,6 +61,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,11 +69,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\IEntityHasPassword.cs" />
-    <Compile Include="Exception\DomainGeneralException.cs" />
+    <Compile Include="CommandHandlers\CommandHandlerWithResult.cs" />
+    <Compile Include="CommandHandlers\CommandResult.cs" />
+    <Compile Include="ControlsExtension\Direction.cs" />
+    <Compile Include="ControlsExtension\MvcContributeGridSort.cs" />
+    <Compile Include="Exceptions\DomainGeneralException.cs" />
+    <Compile Include="Specification\OrderBySpecification.cs" />
     <Compile Include="Specification\PagingLinqSpecification.cs" />
     <Compile Include="QueryOver\QueryOverExtention.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Authentications\CustomFormsAuthentication.cs" />
+    <Compile Include="Util\Authentications\ICustomFormsAuthentication.cs" />
+    <Compile Include="Util\Logger.cs" />
     <Compile Include="Util\RandomStringGenerator.cs" />
     <Compile Include="Util\EncryptionUtil.cs" />
   </ItemGroup>

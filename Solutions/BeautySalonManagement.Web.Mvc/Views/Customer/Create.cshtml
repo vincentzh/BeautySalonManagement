@@ -12,14 +12,11 @@
 {
 	@Html.AntiForgeryToken()
     @Html.ValidationSummary()
-	<ul>
-		@Html.Partial("People/Edit",Model)
-		<li>
+		<div class="control-group">
 			@Html.LabelFor(x=>x.CustomerCardNo)
-			<div>
-				@Html.TextBoxFor(x => x.CustomerCardNo)
-			</div>
-		</li>
-	</ul>
-    @Html.SubmitButton()
+            @Html.TextBoxFor(x => x.CustomerCardNo)
+		</div>
+		@Html.Partial("People/Edit", Model)
+		<div class="control-group">
+			@Html.SubmitButton("Create", "保存", new {@class = "btn btn-primary"}) @(Html.ActionLink<CustomerController>(x=>x.Index(null,null),"取消",new { @class = "btn" }))</div>
 }

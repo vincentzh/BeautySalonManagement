@@ -152,7 +152,7 @@ namespace CommonLib.Util
 				return null;
 
 			if (!IsUsingLowCase && !IsUsingUpperCase && !IsUsingNumeric && !IsUsingSpecialChars)
-				throw new Exception(" All candidate chars are disabled. ");
+				throw new System.Exception(" All candidate chars are disabled. ");
 
 			// Create a local array containing supported password characters
 			// grouped by types. You can remove character groups from this

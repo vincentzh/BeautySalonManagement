@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CommonLib.Exception;
+using CommonLib.Exceptions;
 using MindHarbor.GenClassLib.Configuration;
 using MindHarbor.SingletonUtil;
 
@@ -18,8 +15,8 @@ namespace BeautySalonManagement.Domain
 				t = Type.GetType(tn);
 			if (t == null)
 				throw new DomainGeneralException("Cannot find type \"" + tn + "\" as " + key +
-												 ", please check configuration file");
-			return (T)SingletonInstanceLoader.Load(t);
+				                                 ", please check configuration file");
+			return (T) SingletonInstanceLoader.Load(t);
 		}
 	}
 }

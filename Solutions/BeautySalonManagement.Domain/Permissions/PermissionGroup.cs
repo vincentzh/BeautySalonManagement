@@ -13,6 +13,6 @@ namespace BeautySalonManagement.Domain.Permissions
 	{
 		[DomainSignature]
 		public virtual string Name { get; set; }
-		public virtual ICollection<PermissionGroupAndItemRelationship> Relationships { get; protected set; }
+		public virtual ICollection<PermissionGroupAndControllerActionRelation> PermissionGroupAndControllerActionRelations { get; protected set; }
 	}
 }

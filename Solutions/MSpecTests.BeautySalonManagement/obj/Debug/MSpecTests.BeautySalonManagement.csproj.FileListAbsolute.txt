@@ -40,9 +40,7 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.Bea
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\BeautySalonManagement.Web.Mvc.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Machine.Specifications.AutoMocking.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Moq.dll
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\nunit.mocks.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\NUnit.Specifications.AutoMocking.dll
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\pnunit.framework.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Rhino.Mocks.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\CommonLib.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\log4net.dll
@@ -60,3 +58,6 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.Bea
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\AutoMapper.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Machine.Specifications.Clr4.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Machine.Specifications.Mvc.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\MindHarbor.GenClassLib.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\MindHarbor.SingletonUtil.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Rhino.Mocks.xml

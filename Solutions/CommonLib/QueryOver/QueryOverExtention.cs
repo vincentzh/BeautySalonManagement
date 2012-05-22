@@ -1,5 +1,4 @@
-﻿using MvcContrib.Sorting;
-using MvcContrib.UI.Grid;
+﻿using CommonLib.ControlsExtension;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Criterion.Lambda;
@@ -9,14 +8,14 @@ namespace CommonLib.QueryOver
 	public static class QueryOverExtention
 	{
 		public static IQueryOver<TRoot, TSubType> OrderBy<TRoot, TSubType>(this IQueryOver<TRoot, TSubType> queryOver,
-		                                                                   GridSortOptions sort)
+		                                                                   MvcContributeGridSort sort)
 		{
 			if (sort == null)
 				return queryOver;
 			if (!string.IsNullOrWhiteSpace(sort.Column))
 			{
 				IQueryOverOrderBuilder<TRoot, TSubType> queryOverOrderBuilder = queryOver.OrderBy(Projections.Property(sort.Column));
-				if (sort.Direction == SortDirection.Ascending)
+				if (sort.Direction == Direction.ASC)
 				{
 					return queryOverOrderBuilder.Asc;
 				}

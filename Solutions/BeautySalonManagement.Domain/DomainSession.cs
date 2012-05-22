@@ -1,4 +1,5 @@
-﻿using MindHarbor.GenClassLib.Data;
+﻿using BeautySalonManagement.Domain.Peoples;
+using MindHarbor.GenClassLib.Data;
 
 namespace BeautySalonManagement.Domain
 {
@@ -25,5 +26,7 @@ namespace BeautySalonManagement.Domain
 				return instance.Value;
 			}
 		}
+
+		public People People { get; set; }
 	}
 }

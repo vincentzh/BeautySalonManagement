@@ -1,4 +1,5 @@
-﻿namespace BeautySalonManagement.Tests.BeautySalonManagement.Data.NHibernateMaps
+﻿
+namespace BeautySalonManagement.Tests.BeautySalonManagement.Data.NHibernateMaps
 {
     using System.IO;
 

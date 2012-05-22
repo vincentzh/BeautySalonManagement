@@ -1,6 +1,6 @@
 ﻿using System;
+using BeautySalonManagement.Domain.Interfaces;
 using BeautySalonManagement.Domain.Permissions;
-using CommonLib.Domain;
 using CommonLib.Util;
 using SharpArch.Domain.DomainModel;
 
