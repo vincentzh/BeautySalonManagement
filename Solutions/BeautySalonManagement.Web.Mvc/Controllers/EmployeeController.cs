@@ -1,101 +1,101 @@
 ﻿using System.Web.Mvc;
+using AutoMapper;
+using BeautySalonManagement.Domain.Contracts.Tasks;
+using BeautySalonManagement.Domain.Peoples;
+using BeautySalonManagement.Tasks.CommandHandlers.Employees;
+using BeautySalonManagement.Tasks.Commands.Customers;
+using BeautySalonManagement.Web.Mvc.Controllers.ViewModels;
+using CommonLib.CommandHandlers;
+using CommonLib.Util;
+using MvcContrib;
+using MvcContrib.UI.Grid;
+using SharpArch.Domain.Commands;
+using SharpArch.NHibernate.Web.Mvc;
 
 namespace BeautySalonManagement.Web.Mvc.Controllers
 {
     public class EmployeeController : Controller
     {
+    	ICommandProcessor CommandProcessor;
+    	IEmployeeTasks EmployeeTasks;
+		public EmployeeController(ICommandProcessor commandProcessor,IEmployeeTasks employeeTasks)
+		{
+			CommandProcessor = commandProcessor;
+			EmployeeTasks = employeeTasks;
+		}
         //
         // GET: /Employee/
 
-        public ActionResult Index()
-        {
-            return View();
-        }
 
-        //
-        // GET: /Employee/Details/5
+		[HttpGet]
+		public ActionResult Index(int? pageIndex, GridSortOptions sort)
+		{
+			ViewBag.Sort = sort;
 
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
 
-        //
-        // GET: /Employee/Create
+			return View(new CustomPaginationHelper<Employee>(EmployeeTasks).Pagination(10, pageIndex, sort));
+		}
 
-        public ActionResult Create()
-        {
-            return View();
-        } 
+     
 
-        //
-        // POST: /Employee/Create
+		[HttpGet]
+		public ActionResult Create()
+		{
+			return View();
+		}
 
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
+		[Transaction]
+		[ValidateAntiForgeryToken]
+		[HttpPost]
+		public ActionResult Create(EmployeeViewModel employeeViewModel)
+		{
+			if (ModelState.IsValid)
+			{
+				var addEmployeeCommand = new AddEmployeeCommand();
+				Mapper.CreateMap<EmployeeViewModel, AddEmployeeCommand>().BeforeMap((s, d) => d.Password = s.ConfirmPassword);
+				Mapper.Map(employeeViewModel, addEmployeeCommand);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-        
-        //
-        // GET: /Employee/Edit/5
- 
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
+				CommandProcessor.Process<AddEmployeeCommand, CommandResult>(addEmployeeCommand, ModelState);
+				if (!ModelState.IsValid)
+					return View();
+				return this.RedirectToAction(c => c.Index(null, null));
+			}
 
-        //
-        // POST: /Employee/Edit/5
+			return View();
+		}
 
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
- 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+		[HttpGet]
+		public ActionResult Edit(int id)
+		{
+			var employee = EmployeeTasks.Get(id);
+			if (employee != null)
+			{
+				Mapper.CreateMap<Employee, EmployeeViewModel>().AfterMap((c, m) => { m.ConfirmPassword = c.Password; }).AfterMap(
+						(c, m) => { m.Birthday = c.Birthday == null ? string.Empty : c.Birthday.Value.ToString("yyyy/MM/dd"); });
+				EmployeeViewModel employeeViewModel = Mapper.Map<Employee, EmployeeViewModel>(employee);
+				return View(employeeViewModel);
+			}
+			return new HttpNotFoundResult();
+		}
 
-        //
-        // GET: /Employee/Delete/5
- 
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
+		[HttpPost]
+		[Transaction]
+		[ValidateAntiForgeryToken]
+		public ActionResult Edit(EmployeeViewModel employeeViewModel)
+		{
+			if (ModelState.IsValid)
+			{
+				var editEmployeeCommand = new EditEmployeeCommand();
+				Mapper.CreateMap<EmployeeViewModel, EditEmployeeCommand>();
+				Mapper.Map(employeeViewModel, editEmployeeCommand);
+				CommandProcessor.Process<EditEmployeeCommand, CommandResult>(editEmployeeCommand, ModelState);
 
-        //
-        // POST: /Employee/Delete/5
+				if (!ModelState.IsValid)
+					return View();
+				return this.RedirectToAction(c => c.Index(null, null));
+			}
 
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
- 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+			return View();
+		}
     }
 }

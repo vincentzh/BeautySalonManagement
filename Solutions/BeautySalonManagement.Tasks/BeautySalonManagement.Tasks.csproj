@@ -133,7 +133,11 @@
     </Compile>
     <Compile Include="CommandHandlers\Customers\AddCustomerCommandHandler.cs" />
     <Compile Include="CommandHandlers\Customers\EditCustomerCommandHandler.cs" />
+    <Compile Include="CommandHandlers\Employees\AddEmployeeCommand.cs" />
+    <Compile Include="CommandHandlers\Employees\EditEmployeeCommand.cs" />
+    <Compile Include="CommandHandlers\Employees\EmployeeCommandBase.cs" />
     <Compile Include="Commands\Customers\AddCustomerCommand.cs" />
+    <Compile Include="Commands\Customers\CustomerCommandBase.cs" />
     <Compile Include="Commands\Customers\EditCustomerCommand.cs" />
     <Compile Include="Commands\People\PeopleCommandBase.cs" />
     <Compile Include="CustomerTasks.cs" />

@@ -1,0 +1,26 @@
+﻿@model BeautySalonManagement.Web.Mvc.Controllers.ViewModels.EmployeeViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Html.EnableClientValidation();
+}
+
+<h2>Create</h2>
+
+@using(Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+		<div class="control-group">
+			@Html.LabelFor(x=>x.ContactInfoName)
+            @Html.TextBoxFor(x => x.ContactInfoName)
+		</div>
+	<div class="control-group">
+		@Html.LabelFor(x=>x.ContactInfoPhone)
+        @Html.TextBoxFor(x=>x.ContactInfoPhone)
+	</div>
+		@Html.Partial("People/Edit", Model)
+		<div class="control-group">
+			@Html.SubmitButton("Create", "保存", new {@class = "btn btn-primary"}) @(Html.ActionLink<EmployeeController>(x=>x.Index(null,null),"取消",new { @class = "btn" }))</div>
+}

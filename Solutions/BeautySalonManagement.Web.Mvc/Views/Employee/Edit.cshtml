@@ -1,0 +1,24 @@
+﻿@model BeautySalonManagement.Web.Mvc.Controllers.ViewModels.EmployeeViewModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    @Html.AntiForgeryToken()
+	@Html.Partial("People/Edit")
+    <div class="control-group">
+		@Html.LabelFor(customer => customer.ContactInfoName)
+		@Html.TextBoxFor(customer => customer.ContactInfoName)
+	</div>
+    <div class="control-group">
+		@Html.LabelFor(customer => customer.ContactInfoPhone)
+		@Html.TextBoxFor(customer => customer.ContactInfoPhone)
+	</div>
+    <div class="control-group">
+		@Html.SubmitButton("Save", "保存", new { @class = "btn btn-primary" }) @(Html.ActionLink<EmployeeController>(x => x.Index(null, null), "取消", new { @class = "btn" }))</div>
+}

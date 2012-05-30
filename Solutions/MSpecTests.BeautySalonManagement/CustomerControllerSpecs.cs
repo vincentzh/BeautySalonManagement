@@ -1,12 +1,9 @@
 ﻿#region
 
-using System.Collections.Generic;
 using System.Web.Mvc;
 using BeautySalonManagement.Domain.Contracts.Tasks;
-using BeautySalonManagement.Domain.Peoples;
 using BeautySalonManagement.Web.Mvc.Controllers;
 using BeautySalonManagement.Web.Mvc.Controllers.ViewModels;
-using CommonLib.ControlsExtension;
 using Machine.Specifications;
 using Machine.Specifications.AutoMocking.Rhino;
 using Machine.Specifications.Mvc;
@@ -44,5 +41,6 @@ namespace MSpecTests.BeautySalonManagement
 
 		Because of = () => result = customerController.Create(customerViewModel);
 		It should_redirect_to_index = () => result.ShouldRedirectToAction<CustomerController>(x => x.Index(null, null));
+		
 	}
 }

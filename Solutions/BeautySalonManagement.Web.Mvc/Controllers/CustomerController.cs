@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿#region
+
 using System.Web.Mvc;
 using AutoMapper;
 using BeautySalonManagement.Domain.Contracts.Tasks;
@@ -8,14 +8,13 @@ using BeautySalonManagement.Tasks.Commands.Customers;
 using BeautySalonManagement.Web.Mvc.Base;
 using BeautySalonManagement.Web.Mvc.Controllers.ViewModels;
 using CommonLib.CommandHandlers;
-using CommonLib.ControlsExtension;
+using CommonLib.Util;
 using MvcContrib;
-using MvcContrib.Pagination;
-using MvcContrib.Sorting;
 using MvcContrib.UI.Grid;
-using NHibernate;
 using SharpArch.Domain.Commands;
 using SharpArch.NHibernate.Web.Mvc;
+
+#endregion
 
 namespace BeautySalonManagement.Web.Mvc.Controllers
 {
@@ -31,26 +30,14 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 			CommandProcessor = commandProcessor;
 		}
 
-		[Transaction]
+
 		[HttpGet]
-		public ActionResult Index(int? page=null, GridSortOptions sort=null)
+		public ActionResult Index(int? pageIndex, GridSortOptions sort)
 		{
 			ViewBag.Sort = sort;
-			int pageSize = 10;
 
-			int startRow = pageSize*((page ?? 1) - 1);
-			IEnumerable<Customer> customers = CustomerTasks.FindAll(startRow, pageSize,
-			                                                        new MvcContributeGridSort
-			                                                        	{
-			                                                        			Column = sort.Column,
-			                                                        			Direction =
-			                                                        					(sort.Direction == SortDirection.Ascending
-			                                                        					 		? Direction.ASC
-			                                                        					 		: Direction.DESC)
-			                                                        	});
-			IFutureValue<int> count = CustomerTasks.CountAll();
 
-			return View(new CustomPagination<Customer>(customers, page ?? 1, pageSize, count.Value));
+			return View(new CustomPaginationHelper<Customer>(CustomerTasks).Pagination(10, pageIndex, sort));
 		}
 
 		[HttpGet]
@@ -69,16 +56,8 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 				var addCustomerCommand = new AddCustomerCommand();
 				Mapper.CreateMap<CustomerViewModel, AddCustomerCommand>().BeforeMap((s, d) => d.Password = s.ConfirmPassword);
 				Mapper.Map(customerViewModel, addCustomerCommand);
-				CommandProcessor.Process<AddCustomerCommand,CommandResult>(addCustomerCommand,x=>
-				{
-					if(!x.Success)
-					{
-						foreach (var errorMessage in x.ErrorMessages)
-						{
-							ModelState.AddModelError("", errorMessage);
-						}
-					}
-				});
+			
+				CommandProcessor.Process<AddCustomerCommand, CommandResult>(addCustomerCommand, ModelState);
 				if (!ModelState.IsValid)
 					return View();
 				return this.RedirectToAction(c => c.Index(null, null));
@@ -86,20 +65,21 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 
 			return View();
 		}
+
 		[HttpGet]
 		public ActionResult Edit(int id)
 		{
-
 			Customer customer = CustomerTasks.Get(id);
-			if(customer!=null)
+			if (customer != null)
 			{
-				Mapper.CreateMap<Customer, CustomerViewModel>().AfterMap((c, m) => { m.ConfirmPassword = c.Password; }).AfterMap((c, m) =>
-				{ m.Birthday = c.Birthday == null ? string.Empty : c.Birthday.Value.ToString("yyyy/MM/dd"); });
+				Mapper.CreateMap<Customer, CustomerViewModel>().AfterMap((c, m) => { m.ConfirmPassword = c.Password; }).AfterMap(
+						(c, m) => { m.Birthday = c.Birthday == null ? string.Empty : c.Birthday.Value.ToString("yyyy/MM/dd"); });
 				CustomerViewModel customerViewModel = Mapper.Map<Customer, CustomerViewModel>(customer);
 				return View(customerViewModel);
 			}
 			return new HttpNotFoundResult();
 		}
+
 		[HttpPost]
 		[Transaction]
 		[ValidateAntiForgeryToken]
@@ -110,16 +90,8 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 				var editCustomerCommand = new EditCustomerCommand();
 				Mapper.CreateMap<CustomerViewModel, EditCustomerCommand>();
 				Mapper.Map(customerViewModel, editCustomerCommand);
-				CommandProcessor.Process<EditCustomerCommand,CommandResult>(editCustomerCommand,x=>
-				{
-					if(!x.Success)
-					{
-						foreach (var errorMessage in x.ErrorMessages)
-						{
-							ModelState.AddModelError("", errorMessage);
-						}
-					}
-				});
+				CommandProcessor.Process<EditCustomerCommand, CommandResult>(editCustomerCommand, ModelState);
+				
 				if (!ModelState.IsValid)
 					return View();
 				return this.RedirectToAction(c => c.Index(null, null));

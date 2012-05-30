@@ -1,0 +1,20 @@
+﻿@using MvcContrib.UI.Grid
+@model MvcContrib.Pagination.IPagination<BeautySalonManagement.Domain.Peoples.Employee>
+@{
+	ViewBag.Title = "员工列表";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>客户列表</h2>
+<div align="right">
+	@(Html.ActionLink<EmployeeController>(x => x.Create(), "新建员工", new {@class = "btn btn-primary"}))</div>
+@Html.Grid(Model).Empty("没有数据").Attributes(@class => @class = "table table-striped").Columns(column =>
+{
+	column.For(x => x.Id).Named("员工编号").Sortable(true);
+	column.For(x => x.Name).Named("姓名").Sortable(true);
+	column.For(x => x.Gender.Desc).Named("性别").Sortable(true);
+	column.For(x => x.Birthday).Named("出生日期").Format("{0:yyyy/MM/dd}").Sortable(true);
+	column.For(x => x.MobilePhone).Named("电话").Sortable(true);
+	column.For(x => x.CreateDate).Named("入职时间").Format("{0:yyyy/MM/dd HH:mm}").Sortable(true);
+	column.Custom(x => @Html.ActionLink<EmployeeController>(action => action.Edit(x.Id), "编辑"));
+}).Sort(ViewBag.Sort)
+@Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItems).Options(x => x.MaxNrOfPages(5).DisplayTemplate("BootstrapPagination"))
