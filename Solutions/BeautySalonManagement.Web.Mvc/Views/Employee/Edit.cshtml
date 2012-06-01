@@ -10,7 +10,7 @@
 {
     @Html.ValidationSummary()
     @Html.AntiForgeryToken()
-	@Html.Partial("People/Edit")
+	@Html.Partial("People/Edit")<br />
     <div class="control-group">
 		@Html.LabelFor(customer => customer.ContactInfoName)
 		@Html.TextBoxFor(customer => customer.ContactInfoName)

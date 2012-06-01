@@ -2,8 +2,8 @@
 using AutoMapper;
 using BeautySalonManagement.Domain.Contracts.Tasks;
 using BeautySalonManagement.Domain.Peoples;
-using BeautySalonManagement.Tasks.CommandHandlers.Employees;
 using BeautySalonManagement.Tasks.Commands.Customers;
+using BeautySalonManagement.Tasks.Commands.Employees;
 using BeautySalonManagement.Web.Mvc.Controllers.ViewModels;
 using CommonLib.CommandHandlers;
 using CommonLib.Util;
