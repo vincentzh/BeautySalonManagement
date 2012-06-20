@@ -10,7 +10,8 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps.Conventions
 
 		public void Apply(IIdentityInstance instance)
 		{
-			instance.GeneratedBy.HiLo("1000");
+
+			instance.GeneratedBy.HiLo("NH_Hilo",instance.EntityType.Name+"_NextHi","1000");
 		}
 
 		#endregion

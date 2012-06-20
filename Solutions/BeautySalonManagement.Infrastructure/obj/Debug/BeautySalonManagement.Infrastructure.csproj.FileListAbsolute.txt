@@ -8,7 +8,6 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonMan
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\SharpArch.Domain.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\SharpArch.NHibernate.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\BeautySalonManagement.Domain.pdb
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\FluentNHibernate.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\Iesi.Collections.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\NHibernate.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\SharpArch.Domain.pdb
@@ -34,7 +33,10 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonMan
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\MindHarbor.GenClassLib.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\MindHarbor.SingletonUtil.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\Newtonsoft.Json.dll
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\Newtonsoft.Json.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\Newtonsoft.Json.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\log4net.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\log4net.xml
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\FluentNHibernate.xml
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Infrastructure\bin\Debug\Microsoft.Practices.ServiceLocation.xml

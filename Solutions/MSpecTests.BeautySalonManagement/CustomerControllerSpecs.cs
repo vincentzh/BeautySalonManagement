@@ -2,11 +2,13 @@
 
 using System.Web.Mvc;
 using BeautySalonManagement.Domain.Contracts.Tasks;
+using BeautySalonManagement.Domain.Peoples;
 using BeautySalonManagement.Web.Mvc.Controllers;
 using BeautySalonManagement.Web.Mvc.Controllers.ViewModels;
 using Machine.Specifications;
 using Machine.Specifications.AutoMocking.Rhino;
 using Machine.Specifications.Mvc;
+using MvcContrib.Pagination;
 using Rhino.Mocks;
 using SharpArch.Domain.Commands;
 
@@ -15,7 +17,7 @@ using SharpArch.Domain.Commands;
 namespace MSpecTests.BeautySalonManagement
 {
 	[Subject(typeof (CustomerController))]
-	public class should_create_customer : Specification<CustomerController>
+	public class when_create_customer : Specification<CustomerController>
 	{
 		static ICustomerTasks CustomerTasks;
 		static ICommandProcessor commandProcessor;
@@ -35,12 +37,13 @@ namespace MSpecTests.BeautySalonManagement
 			                    			CustomerCardNo = "test",
 			                    			MobilePhone = "test",
 			                    			Name = "test",
-			                    			Password = "test"
+			                    			Password = "test",
+											GenderName=Gender.Female.Name
 			                    	};
 		};
 
 		Because of = () => result = customerController.Create(customerViewModel);
 		It should_redirect_to_index = () => result.ShouldRedirectToAction<CustomerController>(x => x.Index(null, null));
-		
+		It should_return_pagination_result = () => result.ShouldBeOfType<CustomPagination<Customer>>();
 	}
 }

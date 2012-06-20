@@ -37,7 +37,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 			ViewBag.Sort = sort;
 
 
-			return View(new CustomPaginationHelper<Customer>(CustomerTasks).Pagination(10, pageIndex, sort));
+			return View(new CustomPaginationHelper<Customer>(CustomerTasks).Pagination(pageIndex, sort));
 		}
 
 		[HttpGet]

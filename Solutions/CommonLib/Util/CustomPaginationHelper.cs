@@ -19,7 +19,7 @@ namespace CommonLib.Util
 			_paggingTask = task;
 		}
 
-		public CustomPagination<T> Pagination(int pageSize, int? pageIndex, GridSortOptions sort)
+		public CustomPagination<T> Pagination(int? pageIndex, GridSortOptions sort, int pageSize = 10)
 		{
 			var index = (pageIndex ?? 1);
 			var startRow = pageSize*(index - 1);

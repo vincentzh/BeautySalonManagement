@@ -6,14 +6,12 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.Bea
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Machine.Specifications.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Newtonsoft.Json.dll
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\nunit.framework.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\SharpArch.Domain.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\MindHarbor.ClassEnum.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\BeautySalonManagement.Domain.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\BeautySalonManagement.Tasks.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Microsoft.Practices.ServiceLocation.xml
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Newtonsoft.Json.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Newtonsoft.Json.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\SharpArch.Domain.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\obj\Debug\MSpecTests.BeautySalonManagement.dll
@@ -34,7 +32,6 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.Bea
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Castle.Core.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Castle.Windsor.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\CommonServiceLocator.WindsorAdapter.pdb
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\FluentNHibernate.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Iesi.Collections.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\SharpArch.Web.Mvc.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\BeautySalonManagement.Web.Mvc.dll
@@ -49,7 +46,6 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.Bea
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\BeautySalonManagement.Web.Mvc.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Moq.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Moq.xml
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\nunit.framework.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\CommonLib.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\log4net.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\BeautySalonManagement.Infrastructure.pdb
@@ -61,3 +57,6 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.Bea
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\MindHarbor.GenClassLib.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\MindHarbor.SingletonUtil.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\Rhino.Mocks.xml
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\MSpecTests.BeautySalonManagement.dll.config
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\ecatalog.cfg.xml
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\MSpecTests.BeautySalonManagement\bin\Debug\FluentNHibernate.xml

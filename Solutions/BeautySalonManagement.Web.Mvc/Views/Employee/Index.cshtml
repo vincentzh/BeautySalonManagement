@@ -4,10 +4,10 @@
 	ViewBag.Title = "员工列表";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>客户列表</h2>
+<h2>员工列表</h2>
 <div align="right">
 	@(Html.ActionLink<EmployeeController>(x => x.Create(), "新建员工", new {@class = "btn btn-primary"}))</div>
-@Html.Grid(Model).Empty("没有数据").Attributes(@class => @class = "table table-striped").Columns(column =>
+@Html.Grid(Model).Empty("没有数据").Attributes(@class =>  "table table-striped").Columns(column =>
 {
 	column.For(x => x.Id).Named("员工编号").Sortable(true);
 	column.For(x => x.Name).Named("姓名").Sortable(true);

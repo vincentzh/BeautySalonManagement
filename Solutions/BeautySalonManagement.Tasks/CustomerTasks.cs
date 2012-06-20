@@ -20,11 +20,11 @@ namespace BeautySalonManagement.Tasks
 			return Session.QueryOver<Customer>().Count().FutureValue<int>();
 		}
 
-		public IFutureValue<Customer> FindByWithLoginInfo(string specificNo, string password)
+		public Customer FindByWithLoginInfo(string specificNo, string password)
 		{
 			return
 					Session.QueryOver<Customer>().Where(
-							customer => customer.CustomerCardNo == specificNo && customer.Password == password).FutureValue<Customer>();
+							customer => customer.CustomerCardNo == specificNo && customer.Password == password).SingleOrDefault<Customer>();
 		}
 
 		public Customer Get(int id)

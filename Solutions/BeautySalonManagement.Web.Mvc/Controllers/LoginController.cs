@@ -40,11 +40,11 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				IFutureValue<Employee> employee = _employeeTasks.FindByWithLoginInfo(model.EmployeeNo, model.Password);
-				if (employee.Value != null)
+				Employee employee = _employeeTasks.FindByWithLoginInfo(model.EmployeeNo, model.Password);
+				if (employee != null)
 				{
-					DomainSession.Current.People = employee.Value;
-					CustomFormsAuthentication.SetAuthCookie(DomainSession.Current.People.Id.ToString(), false);
+					DomainSession.Current.People = employee;
+					CustomFormsAuthentication.SetAuthCookie(DomainSession.Current.People.Name, false);
 					return this.RedirectToAction<HomeController>(x => x.Index());
 				}
 				ModelState.AddModelError("", "登录失败!");

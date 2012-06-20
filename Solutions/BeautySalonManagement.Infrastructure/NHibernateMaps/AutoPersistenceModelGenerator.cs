@@ -5,7 +5,6 @@ using BeautySalonManagement.Domain.Peoples;
 using BeautySalonManagement.Infrastructure.NHibernateMaps.Conventions;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Conventions;
-using FluentNHibernate.Conventions.Helpers;
 using SharpArch.Domain.DomainModel;
 using SharpArch.NHibernate.FluentNHibernate;
 
@@ -38,12 +37,12 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps
 		{
 			return c =>
 			{
+				c.Add<IdGenerationConvention>();
 				c.Add<PrimaryKeyConvention>();
 				c.Add<CustomForeignKeyConvention>();
 				c.Add<HasManyConvention>();
 				c.Add<TableNameConvention>();
 				c.Add<CustomManyToManyTableNameConvention>();
-				c.Add<IdGenerationConvention>();
 				c.Add<ForeignKeyNameConvention>();
 				c.Add<ReferenceConvention>();
 			};

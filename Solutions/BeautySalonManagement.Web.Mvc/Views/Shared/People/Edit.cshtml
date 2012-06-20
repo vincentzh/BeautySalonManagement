@@ -5,12 +5,8 @@
         $('.date').datepicker({ dateFormat: "yy/mm/dd", changeMonth: true, changeYear: true, yearRange: "c-60:c" });
     });
 </script>
-@if (Model != null)
-{
-    <div class="control-group">
-        @Html.HiddenFor(people => people.Id)
-    </div>
-}
+
+
 <div class="control-group">
     @Html.LabelFor(people => people.Name)
     @Html.EditorFor(people => people.Name)
@@ -31,12 +27,4 @@
     @Html.LabelFor(people => people.Address)
     @Html.TextBoxFor(people => people.Address)
 </div>
-<div class="control-group">
-    @Html.LabelFor(people => people.Password)
-    @Html.PasswordFor(people => people.Password,new{value=Model==null?string.Empty:Model.Password})
-</div>
 
-    <div class="control-group">
-        @Html.LabelFor(people => people.ConfirmPassword)
-        @Html.PasswordFor(people => people.ConfirmPassword,new {value=Model==null?string.Empty:Model.ConfirmPassword})
-    </div>

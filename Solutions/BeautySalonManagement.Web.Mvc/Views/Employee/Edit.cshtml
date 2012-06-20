@@ -5,20 +5,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>编辑员工信息</h2>
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary()
     @Html.AntiForgeryToken()
-	@Html.Partial("People/Edit")<br />
-    <div class="control-group">
-		@Html.LabelFor(customer => customer.ContactInfoName)
-		@Html.TextBoxFor(customer => customer.ContactInfoName)
+	<div class="control-group">
+		
+        @Html.Label("工号")
+		@Html.TextBoxFor(employee => employee.Id,new {@readonly="true"})
 	</div>
+	@Html.Partial("People/Edit")
     <div class="control-group">
-		@Html.LabelFor(customer => customer.ContactInfoPhone)
-		@Html.TextBoxFor(customer => customer.ContactInfoPhone)
+		@Html.LabelFor(employee => employee.ContactInfoName)
+		@Html.TextBoxFor(employee => employee.ContactInfoName)
 	</div>
+	<div class="control-group">
+		@Html.LabelFor(employee => employee.ContactInfoPhone)
+		@Html.TextBoxFor(employee => employee.ContactInfoPhone)
+	</div>
+    @Html.Partial("People/Password")
     <div class="control-group">
 		@Html.SubmitButton("Save", "保存", new { @class = "btn btn-primary" }) @(Html.ActionLink<EmployeeController>(x => x.Index(null, null), "取消", new { @class = "btn" }))</div>
 }

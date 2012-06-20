@@ -14,11 +14,9 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonMan
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\BeautySalonManagement.Infrastructure.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\Microsoft.Practices.ServiceLocation.xml
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\Newtonsoft.Json.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\Newtonsoft.Json.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\SharpArch.Domain.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\SharpArch.NHibernate.pdb
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\FluentNHibernate.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\NHibernate.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\Iesi.Collections.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\obj\Debug\ResolveAssemblyReference.cache
@@ -44,3 +42,4 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonMan
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\MvcContrib.FluentHtml.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\log4net.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\log4net.xml
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Tasks\bin\Debug\FluentNHibernate.xml

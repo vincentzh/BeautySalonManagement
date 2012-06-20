@@ -25,12 +25,10 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonMan
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\Castle.Core.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\Castle.Windsor.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\CommonServiceLocator.WindsorAdapter.pdb
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\FluentNHibernate.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\Iesi.Collections.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\log4net.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\Microsoft.Practices.ServiceLocation.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\Microsoft.Practices.ServiceLocation.xml
-D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\Newtonsoft.Json.pdb
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\Newtonsoft.Json.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\NHibernate.xml
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\SharpArch.Domain.pdb
@@ -47,3 +45,4 @@ D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonMan
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\MindHarbor.GenClassLib.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\MindHarbor.SingletonUtil.dll
 D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\MvcPaging.dll
+D:\SourceCode\OpenSource\GitStuff\BeautySalonManagement\Solutions\BeautySalonManagement.Web.Mvc\bin\FluentNHibernate.xml

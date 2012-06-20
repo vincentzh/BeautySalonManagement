@@ -8,6 +8,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
     {
         public ActionResult Index()
         {
+			
             return View();
         }
 

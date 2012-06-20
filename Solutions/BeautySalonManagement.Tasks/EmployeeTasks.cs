@@ -13,11 +13,11 @@ namespace BeautySalonManagement.Tasks
 	{
 		#region IEmployeeTasks Members
 
-		public IFutureValue<Employee> FindByWithLoginInfo(string specificNo, string password)
+		public Employee FindByWithLoginInfo(string specificNo, string password)
 		{
 			return
 					Session.QueryOver<Employee>().Where( 
-							x => x.Id== Convert.ToInt32(specificNo) && x.Password == password).FutureValue<Employee>();
+							x => x.Id== Convert.ToInt32(specificNo) && x.Password == password).SingleOrDefault<Employee>();
 		}
 
 		public Employee Get(int id)
