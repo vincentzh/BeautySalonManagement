@@ -1,26 +1,32 @@
 ﻿<!DOCTYPE html >
-<html >
-
+<html>
 <head id="Head1" runat="server">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="/Content/themes/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="/Content/themes/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
-    <script src="@Url.Content("/Content/js/jquery-1.7.2.min.js")" type="text/javascript"></script>    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/Content/themes/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/themes/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("/Content/js/jquery-1.7.2.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("/Content/js/modernizr-2.5.3.js")" type="text/javascript"></script>
     <script src="@Url.Content("/Content/js/bootstrap.js")"  type="text/javascript"></script>
-           <script src="@Url.Content("/Content/js/jquery.validate.min.js")"  type="text/javascript"></script>
-         <script src="@Url.Content("/Content/js/jquery.validate.unobtrusive.min.js")"  type="text/javascript"></script>
-       
-    <title>@ViewBag.Title</title>    
+    <script src="@Url.Content("/Content/js/jquery.validate.min.js")"  type="text/javascript"></script>
+    <script src="@Url.Content("/Content/js/jquery.validate.unobtrusive.min.js")"  type="text/javascript"></script>
+    <title>@ViewBag.Title</title>
 </head>
 <body>
-	<div class="container">
-		<div class="visible-desktop row">
-		&nbsp;
-		</div>
-        <div class="row-fluid">
-		<div class="hidden-phone span2"> &nbsp;</div><div class="span2 hidden-tablet">&nbsp;</div><div class=" span4">@RenderBody()</div><div class="span2 hidden-tablet">&nbsp;</div><div class="span2 hidden-phone">&nbsp;</div>
+    <div class="container">
+        <div class="visible-desktop row">
+            &nbsp;
         </div>
-	</div>
+        <div class="row-fluid">
+            <div class="hidden-phone span2">
+                &nbsp;</div>
+            <div class="span2 hidden-tablet">
+                &nbsp;</div>
+            <div class=" span4">@RenderBody()</div>
+            <div class="span2 hidden-tablet">
+                &nbsp;</div>
+            <div class="span2 hidden-phone">
+                &nbsp;</div>
+        </div>
+    </div>
 </body>
 </html>

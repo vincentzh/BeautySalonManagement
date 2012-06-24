@@ -1,4 +1,5 @@
-﻿using SharpArch.Domain.DomainModel;
+﻿using BeautySalonManagement.Domain.Interfaces;
+using SharpArch.Domain.DomainModel;
 using SharpArch.NHibernate.NHibernateValidator;
 
 namespace BeautySalonManagement.Domain.Peoples

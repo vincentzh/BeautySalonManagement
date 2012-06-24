@@ -8,7 +8,6 @@ using BeautySalonManagement.Web.Mvc.Controllers.ViewModels;
 using Machine.Specifications;
 using Machine.Specifications.AutoMocking.Rhino;
 using Machine.Specifications.Mvc;
-using MvcContrib.Pagination;
 using Rhino.Mocks;
 using SharpArch.Domain.Commands;
 
@@ -29,7 +28,7 @@ namespace MSpecTests.BeautySalonManagement
 		{
 			CustomerTasks = DependencyOf<ICustomerTasks>();
 			commandProcessor = DependencyOf<ICommandProcessor>();
-			customerController = MockRepository.GenerateMock<CustomerController>(CustomerTasks, commandProcessor);
+			customerController = MockRepository.GenerateStub<CustomerController>(CustomerTasks, commandProcessor);
 			customerViewModel = new CustomerViewModel
 			                    	{
 			                    			Address = "test",
@@ -38,12 +37,11 @@ namespace MSpecTests.BeautySalonManagement
 			                    			MobilePhone = "test",
 			                    			Name = "test",
 			                    			Password = "test",
-											GenderName=Gender.Female.Name
+			                    			GenderName = Gender.Female.Name
 			                    	};
 		};
 
 		Because of = () => result = customerController.Create(customerViewModel);
 		It should_redirect_to_index = () => result.ShouldRedirectToAction<CustomerController>(x => x.Index(null, null));
-		It should_return_pagination_result = () => result.ShouldBeOfType<CustomPagination<Customer>>();
 	}
 }

@@ -163,11 +163,13 @@
     <Compile Include="CastleWindsor\ComponentRegistrar.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RouteRegistrar.cs" />
     <Compile Include="Controllers\ViewModels\CustomerViewModel.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\ViewModels\EmployeeViewModel.cs" />
+    <Compile Include="Controllers\ViewModels\ItemViewModel.cs" />
     <Compile Include="Controllers\ViewModels\LoginViewModel.cs" />
     <Compile Include="Controllers\ViewModels\PersonViewModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -176,6 +178,12 @@
     <Compile Include="Helpers\FrontMenu.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\themes\bootstrap-responsive.css" />
+    <Content Include="Content\themes\bootstrap-responsive.min.css" />
+    <Content Include="Content\themes\bootstrap.css" />
+    <Content Include="Content\themes\bootstrap.min.css" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -231,10 +239,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\site.css" />
-    <Content Include="Content\themes\bootstrap-responsive.css" />
-    <Content Include="Content\themes\bootstrap-responsive.min.css" />
-    <Content Include="Content\themes\bootstrap.css" />
-    <Content Include="Content\themes\bootstrap.min.css" />
     <Content Include="Content\themes\images\glyphicons-halflings-white.png" />
     <Content Include="Content\themes\images\glyphicons-halflings.png" />
     <Content Include="Content\img\sharp_arch.jpg" />
@@ -242,8 +246,6 @@
     <Content Include="Content\js\jQuery-Datepicker-zh.js" />
     <Content Include="ecatalog.cfg.xml" />
     <Content Include="Global.asax" />
-    <Content Include="Content\js\bootstrap.js" />
-    <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\modernizr-2.5.3.js" />
     <Content Include="Content\js\jquery.validate-vsdoc.js" />
     <Content Include="Content\js\jquery.validate.js" />
@@ -255,6 +257,8 @@
     <Content Include="Content\js\jquery-ui-1.8.20.min.js" />
     <Content Include="Content\js\jquery.validate.unobtrusive.js" />
     <Content Include="Content\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -322,6 +326,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\People\Password.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Item\Index.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -133,11 +133,14 @@
     <Compile Include="Contracts\Tasks\ICustomerTasks.cs" />
     <Compile Include="Contracts\Tasks\IEmployeeTasks.cs" />
     <Compile Include="Contracts\Tasks\IPersonTasks.cs" />
+    <Compile Include="Contracts\Tasks\IItemTasks.cs" />
     <Compile Include="DomainSession.cs" />
     <Compile Include="DomainSetting.cs" />
-    <Compile Include="Interfaces\IProduct.cs" />
+    <Compile Include="Interfaces\IBrand.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Interfaces\ISaleInfo.cs" />
     <Compile Include="Interfaces\IService.cs" />
+    <Compile Include="Items\Brand.cs" />
     <Compile Include="Items\Item.cs" />
     <Compile Include="Items\ItemType.cs" />
     <Compile Include="Peoples\ContactInfo.cs" />

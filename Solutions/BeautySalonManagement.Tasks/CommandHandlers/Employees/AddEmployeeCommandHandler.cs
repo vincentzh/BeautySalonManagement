@@ -6,23 +6,17 @@ using SharpArch.Domain.PersistenceSupport;
 
 namespace BeautySalonManagement.Tasks.CommandHandlers.Employees
 {
-	public class AddEmployeeCommandHandler : CommandHandlerWithResult<AddEmployeeCommand>
+	public class AddEmployeeCommandHandler : CommandHandlerWithResult<AddEmployeeCommand,IRepository<Employee>,Employee>
 	{
-		readonly IRepository<Employee> _repoEmployee;
-		public AddEmployeeCommandHandler(IRepository<Employee> repository)
+		public AddEmployeeCommandHandler(IRepository<Employee> repository):base(repository)
 		{
-			_repoEmployee = repository;
 		}
-		public override CommandResult Handle()
+		public override void  HandleEntity()
+
 		{
 			Mapper.CreateMap<AddEmployeeCommand, Employee>().ForMember(x => x.Id, o => o.Ignore());
-			var employee = Mapper.Map<AddEmployeeCommand, Employee>(CurrentCommand);
-			var commandResult = ExtendValidation(employee);
-			if (commandResult.Success)
-			{
-				_repoEmployee.SaveOrUpdate(employee);
-			}
-			return commandResult;
+			CurrentEntity = Mapper.Map<AddEmployeeCommand, Employee>(CurrentCommand);
+			
 		}
 	}
 }

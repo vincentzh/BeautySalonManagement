@@ -4,36 +4,33 @@ using AutoMapper;
 using BeautySalonManagement.Domain.Peoples;
 using BeautySalonManagement.Tasks.Commands.Employees;
 using CommonLib.CommandHandlers;
-using SharpArch.Domain.DomainModel;
 using SharpArch.Domain.PersistenceSupport;
 
 #endregion
 
 namespace BeautySalonManagement.Tasks.CommandHandlers.Employees
 {
-	public class EditEmployeeCommandHandler : CommandHandlerWithResult<EditEmployeeCommand>
+	public class EditEmployeeCommandHandler : CommandHandlerWithResult<EditEmployeeCommand,IRepository<Employee>,Employee>
 	{
-		readonly IRepository<Employee> employeeRepository;
+		public EditEmployeeCommandHandler(IRepository<Employee> repository ):base(repository)
+		{
+			
+		}
+		public override void  HandleEntity()
 
-		public override CommandResult Handle()
 		{
 			Mapper.CreateMap<EditEmployeeCommand, Employee>().ForMember(x => x.Id, y => y.Ignore());
-			var employee = employeeRepository.Get(CurrentCommand.Id);
+			CurrentEntity = CurrentRepostiory.Get(CurrentCommand.Id);
 
-			Mapper.Map(CurrentCommand, employee);
-			var commandResult = ExtendValidation(employee);
-			if (commandResult.Success)
-			{
-				employeeRepository.SaveOrUpdate(employee);
-			}
-			return commandResult;
+			Mapper.Map(CurrentCommand, CurrentEntity);
+		
 		}
 
-		protected override void ValidationEntity(Entity entity, CommandResult commandResult)
+		protected override void ValidationEntity(CommandResult commandResult)
 		{
-			base.ValidationEntity(entity, commandResult);
-			var employee = entity as Employee;
-			if (employee == null || employee.Id != CurrentCommand.Id)
+			base.ValidationEntity( commandResult);
+
+			if (CurrentEntity == null || CurrentEntity.Id != CurrentCommand.Id)
 			{
 				commandResult.ErrorMessages.Add("提交的客户信息有误,修改失败");
 				commandResult.Success = false;

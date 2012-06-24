@@ -10,7 +10,7 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps.CustomMap
 
 		public void Override(AutoMapping<Service> mapping)
 		{
-			mapping.HasManyToMany(x => x.Items).Access.CamelCaseField().AsSet().LazyLoad().Cascade.AllDeleteOrphan().Table("tblServiceAndItems");
+			mapping.HasManyToMany(x => x.Items).Access.CamelCaseField().AsSet().LazyLoad().Cascade.SaveUpdate().Table("tblServiceAndItems");
 		}
 
 		#endregion

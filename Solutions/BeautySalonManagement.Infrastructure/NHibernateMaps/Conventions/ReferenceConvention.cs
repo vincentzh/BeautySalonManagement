@@ -9,8 +9,11 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps.Conventions
 
 		public void Apply(IManyToOneInstance instance)
 		{
-			instance.Column(instance.Property.PropertyType.Name + "Id");
-			instance.ForeignKey(instance.EntityType.Name+"_"+instance.Property.Name+"_FK");
+			if (!instance.Property.PropertyType.IsInterface)
+			{
+				instance.Column(instance.Property.PropertyType.Name + "Id");
+			}
+			instance.ForeignKey(instance.EntityType.Name + "_" + instance.Property.Name + "_FK");
 		}
 
 		#endregion

@@ -1,0 +1,23 @@
+﻿@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@using MvcContrib.UI.Grid
+@model MvcContrib.Pagination.IPagination<BeautySalonManagement.Domain.Items.Item>
+<h2>客户列表</h2>
+<div align="right">
+	@(Html.ActionLink<ItemController>(x => x.Create(), "新建客户", new {@class = "btn btn-primary"}))</div>
+@Html.Grid(Model).Empty("没有数据").Attributes(@class => @class = "table table-striped").Columns(column =>
+{
+	column.For(x => x.Id).Visible(false).Sortable(true);
+	column.For(x => x.Name).Named("名称").Sortable(true);
+	column.For(x => x.Description).Named("描述").Sortable(true);
+	column.For(x => x.Brand.Name).Named("品牌").Format("{0:yyyy/MM/dd}").Sortable(true).SortColumnName("brandAlias.Name");
+	column.For(x => x.Price).Named("售价").Format("C").Sortable(true);
+	column.For(x => x.Type.Name).Named("类别").Sortable(true);
+	column.For(x => x.Disable?"是":"否").Named("停止销售").Sortable(true);
+	column.Custom(x => @Html.ActionLink<ItemController>(action => action.Edit(x.Id), "编辑"));
+	column.Custom(x => @Html.ActionLink<ItemController>(action => action.Delete(x.Id), "删除"));
+}).Sort(ViewBag.Sort)
+@Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItems).Options(x => x.MaxNrOfPages(5).DisplayTemplate("BootstrapPagination"))
