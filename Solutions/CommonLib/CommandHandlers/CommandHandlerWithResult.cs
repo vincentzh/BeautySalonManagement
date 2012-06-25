@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using SharpArch.Domain.Commands;
 using SharpArch.Domain.DomainModel;
 using SharpArch.Domain.PersistenceSupport;
@@ -28,6 +29,7 @@ namespace CommonLib.CommandHandlers
 
 			CurrentCommand = command;
 			HandleEntity();
+			
 			CommandResult commandResult = ExtendValidation();
 			if (commandResult.Success)
 			{
@@ -38,7 +40,9 @@ namespace CommonLib.CommandHandlers
 		}
 
 		#endregion
-
+		/// <summary>
+		/// Assign the value to <code>CurrentEntity</code> property
+		/// </summary>
 		public abstract void HandleEntity();
 
 		protected virtual CommandResult ExtendValidation()
@@ -52,17 +56,22 @@ namespace CommonLib.CommandHandlers
 			return commandResult;
 		}
 
-		protected virtual void ValidationEntity(CommandResult commandResult)
+		private  void ValidationEntity(CommandResult commandResult)
 		{
+			if (CurrentEntity == null)
+				throw new NullReferenceException("CurrentEntity Couldn't is Null");
 			foreach (ValidationResult entityValidationResults in CurrentEntity.ValidationResults())
 			{
 				commandResult.ErrorMessages.Add(entityValidationResults.ErrorMessage);
 				if (commandResult.Success)
 					commandResult.Success = false;
 			}
-		}
+			CustomValidationEntity(commandResult);
 
-		protected virtual void ValidationCommand(CommandResult commandResult)
+		}
+		protected virtual void CustomValidationEntity(CommandResult commandResult){}
+
+		private void ValidationCommand(CommandResult commandResult)
 		{
 			foreach (ValidationResult commandValidationResults in CurrentCommand.ValidationResults())
 			{
@@ -70,6 +79,12 @@ namespace CommonLib.CommandHandlers
 				if (commandResult.Success)
 					commandResult.Success = false;
 			}
+			CustomValidationCommand(commandResult);
+		}
+
+		protected virtual void CustomValidationCommand(CommandResult commandResult)
+		{
+			
 		}
 	}
 }

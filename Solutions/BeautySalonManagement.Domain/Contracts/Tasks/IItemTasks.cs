@@ -3,7 +3,7 @@ using CommonLib.Tasks;
 
 namespace BeautySalonManagement.Domain.Contracts.Tasks
 {
-	public interface IItemTasks : IPaggingTask<Item> 
+	public interface IItemTasks : IPaggingTask<Item>, ITask<Item> 
 	{
 		
 	}

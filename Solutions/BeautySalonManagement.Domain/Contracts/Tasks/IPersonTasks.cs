@@ -1,10 +1,10 @@
 ﻿using BeautySalonManagement.Domain.Peoples;
+using CommonLib.Tasks;
 
 namespace BeautySalonManagement.Domain.Contracts.Tasks
 {
-	public interface IPersonTasks<out T> where T : People
+	public interface IPersonTasks<T> : ITask<T> where T : People
 	{
 		T FindByWithLoginInfo(string specificNo, string password);
-		T Get(int id);
 	}
 }

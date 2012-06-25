@@ -25,13 +25,10 @@ namespace BeautySalonManagement.Tasks.CommandHandlers.Customers
 			CurrentEntity  = CurrentRepostiory.Get(CurrentCommand.Id);
 
 			Mapper.Map(CurrentCommand, CurrentEntity);
-		
 		}
 
-		protected override void ValidationEntity( CommandResult commandResult)
+		protected override void CustomValidationEntity( CommandResult commandResult)
 		{
-			base.ValidationEntity( commandResult);
-
 			if (CurrentEntity == null || CurrentEntity.CustomerCardNo != CurrentCommand.CustomerCardNo || CurrentEntity.Id != CurrentCommand.Id)
 			{
 				commandResult.ErrorMessages.Add("提交的客户信息有误,修改失败");

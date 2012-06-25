@@ -138,6 +138,7 @@
     <Compile Include="CommandHandlers\Employees\AddEmployeeCommandHandler.cs" />
     <Compile Include="CommandHandlers\Employees\EditEmployeeCommandHandler.cs" />
     <Compile Include="CommandHandlers\Items\AddItemCommandHandler.cs" />
+    <Compile Include="CommandHandlers\Items\EditItemCommandHandler.cs" />
     <Compile Include="Commands\Items\AddItemCommand.cs" />
     <Compile Include="Commands\Employees\AddEmployeeCommand.cs" />
     <Compile Include="Commands\Employees\EditEmployeeCommand.cs" />
@@ -145,6 +146,8 @@
     <Compile Include="Commands\Customers\AddCustomerCommand.cs" />
     <Compile Include="Commands\Customers\CustomerCommandBase.cs" />
     <Compile Include="Commands\Customers\EditCustomerCommand.cs" />
+    <Compile Include="Commands\Items\EditItemCommand.cs" />
+    <Compile Include="Commands\Items\ItemCommandBase.cs" />
     <Compile Include="Commands\People\PeopleCommandBase.cs" />
     <Compile Include="CustomerTasks.cs" />
     <Compile Include="EmployeeTasks.cs" />

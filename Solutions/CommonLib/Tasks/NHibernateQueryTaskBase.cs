@@ -35,6 +35,11 @@ namespace CommonLib.Tasks
 			return Session.QueryOver<T>().Future<T>();
 		}
 
+		public void Delete(T entity)
+		{
+			Session.Delete(entity);
+		}
+
 		#endregion
 	}
 }

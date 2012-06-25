@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace CommonLib.Tasks
 {
-	public interface ITask<T> where T:class
+	public interface ITask<T> where T : class
 	{
 		T Get(int id);
 		IEnumerable<T> FindByAll();
+		void Delete(T entity);
 	}
-
 }

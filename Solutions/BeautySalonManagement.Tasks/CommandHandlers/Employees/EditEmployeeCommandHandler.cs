@@ -21,14 +21,12 @@ namespace BeautySalonManagement.Tasks.CommandHandlers.Employees
 		{
 			Mapper.CreateMap<EditEmployeeCommand, Employee>().ForMember(x => x.Id, y => y.Ignore());
 			CurrentEntity = CurrentRepostiory.Get(CurrentCommand.Id);
-
 			Mapper.Map(CurrentCommand, CurrentEntity);
 		
 		}
 
-		protected override void ValidationEntity(CommandResult commandResult)
+		protected override void CustomValidationEntity(CommandResult commandResult)
 		{
-			base.ValidationEntity( commandResult);
 
 			if (CurrentEntity == null || CurrentEntity.Id != CurrentCommand.Id)
 			{

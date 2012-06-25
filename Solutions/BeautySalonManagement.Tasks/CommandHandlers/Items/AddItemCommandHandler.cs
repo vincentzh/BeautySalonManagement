@@ -19,14 +19,12 @@ namespace BeautySalonManagement.Tasks.CommandHandlers.Items
 		public override void HandleEntity()
 		{
 			Mapper.CreateMap<AddItemCommand, Item>().ForMember(x => x.Id, o => o.Ignore()).ForMember(x => x.Brand,
-			                                                                                         o => o.Ignore());
+			                                                                                         o =>o.ResolveUsing(y=>BrandRepository.Get(y.BrandId)));
 			CurrentEntity = Mapper.Map<AddItemCommand, Item>(CurrentCommand);
-			CurrentEntity.Brand = BrandRepository.Get(CurrentCommand.BrandId);
 		}
 
-		protected override void ValidationCommand(CommandResult commandResult)
+		protected override void CustomValidationCommand(CommandResult commandResult)
 		{
-			base.ValidationCommand(commandResult);
 			if (commandResult.Success)
 			{
 				Brand brand = BrandRepository.Get(CurrentCommand.BrandId);
