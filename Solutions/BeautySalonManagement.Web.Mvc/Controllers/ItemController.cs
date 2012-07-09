@@ -2,6 +2,7 @@
 using AutoMapper;
 using BeautySalonManagement.Domain.Contracts.Tasks;
 using BeautySalonManagement.Domain.Items;
+using BeautySalonManagement.Tasks;
 using BeautySalonManagement.Tasks.Commands.Items;
 using BeautySalonManagement.Web.Mvc.Base;
 using BeautySalonManagement.Web.Mvc.Controllers.ViewModels;
@@ -17,13 +18,15 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 	public class ItemController : CustomControllerBase
 	{
 		IItemTasks ItemTask;
+		IBrandTasks BrandTasks;
 		ICommandProcessor CommandProcessor;
 		//
 		// GET: /Item/
 
-		public ItemController(IItemTasks itemRepository, ICommandProcessor commandProcessor)
+		public ItemController(IItemTasks itemRepository,IBrandTasks brandRepository, ICommandProcessor commandProcessor)
 		{
 			ItemTask = itemRepository;
+			BrandTasks = brandRepository;
 			CommandProcessor = commandProcessor;
 		}
 		[HttpGet]
@@ -38,7 +41,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 
 		//
 		// GET: /Item/Create
-
+		[HttpGet]
 		public ActionResult Create()
 		{
 			return View();
@@ -69,10 +72,18 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 
 		//
 		// GET: /Item/Edit/5
-
+		[HttpGet]
 		public ActionResult Edit(int id)
 		{
-			return View();
+			Item item = ItemTask.Get(id);
+			if (item != null)
+			{
+				Mapper.CreateMap<Item, ItemViewModel>();
+				var itemViewModel = Mapper.Map<Item, ItemViewModel>(item);
+				ViewBag.BrandTasks = BrandTasks;
+				return View(itemViewModel);
+			}
+			return new HttpNotFoundResult();
 		}
 
 		//
@@ -81,18 +92,21 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		[Transaction]
-		public ActionResult Edit(int id, FormCollection collection)
+		public ActionResult Edit(ItemViewModel itemViewModel)
 		{
-			try
+			if (ModelState.IsValid)
 			{
-				// TODO: Add update logic here
+				var editItemCommand = new EditItemCommand();
+				Mapper.CreateMap<ItemViewModel, EditItemCommand>();
+				Mapper.Map(itemViewModel, editItemCommand);
 
-				return RedirectToAction("Index");
+				CommandProcessor.Process<EditItemCommand, CommandResult>(editItemCommand, ModelState);
+				if (!ModelState.IsValid)
+					return View();
+				return this.RedirectToAction(c => c.Index(null, null));
 			}
-			catch
-			{
-				return View();
-			}
+
+			return View();
 		}
 
 		//

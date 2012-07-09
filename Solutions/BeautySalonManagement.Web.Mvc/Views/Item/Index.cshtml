@@ -16,7 +16,7 @@
 	column.For(x => x.Brand.Name).Named("品牌").Format("{0:yyyy/MM/dd}").Sortable(true).SortColumnName("brandAlias.Name");
 	column.For(x => x.Price).Named("售价").Format("C").Sortable(true);
 	column.For(x => x.Type.Name).Named("类别").Sortable(true);
-	column.For(x => x.Disable?"是":"否").Named("停止销售").Sortable(true);
+	column.For(x => x.Disable ? "是" : "否").Named("停止销售").Sortable(true);
 	column.Custom(x => @Html.ActionLink<ItemController>(action => action.Edit(x.Id), "编辑"));
 	column.Custom(x => @Html.ActionLink<ItemController>(action => action.Delete(x.Id), "删除"));
 }).Sort(ViewBag.Sort)

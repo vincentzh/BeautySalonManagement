@@ -1,11 +1,14 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 using BeautySalonManagement.Domain.Items;
 
 namespace BeautySalonManagement.Web.Mvc.Controllers.ViewModels
 {
 	public class ItemViewModel
 	{
+		[HiddenInput]
+		public int Id { get; set; }
 		[Required]
 		[DisplayName("名称")]
 		public string Name { get; set; }
