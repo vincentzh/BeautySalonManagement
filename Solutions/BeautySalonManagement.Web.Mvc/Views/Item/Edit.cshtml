@@ -7,7 +7,7 @@
 }
 
 <h2>
-    title</h2>
+    编辑</h2>
 @(using(Html.BeginForm()))
 {
 @Html.ValidationSummary()
@@ -22,7 +22,7 @@
 </div>
 <div class="control-group">
 	@Html.LabelFor(item=>item.Description)
-	@Html.TextBoxFor(item=>item.Description)
+	@Html.TextBoxFor(item=>item.Description,new{@style="height:100px"})
 </div>
 <div class="control-group">
 	@Html.LabelFor(item=>item.Price)
@@ -42,7 +42,7 @@
 </div>
 <div class="control-group">
 	@Html.LabelFor(item=>item.BrandId)
-    @Html.DropDownListFor(item=>item.BrandId,new SelectList(ViewBag.BrandTasks.FindAll(),"Id","Name"),Model!=null?Model.BrandId:0)
+    @Html.DropDownListFor(item=>item.BrandId,new SelectList(ViewBag.BrandTasks.FindByAll(),"Id","Name"),Model!=null?Model.BrandId:0)
 </div>
  <div class="control-group">
 		@Html.SubmitButton("Save", "保存", new { @class = "btn btn-primary" }) @(Html.ActionLink<ItemController>(x => x.Index(null, null), "取消", new { @class = "btn" }))</div>

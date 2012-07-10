@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BeautySalonManagement.Domain.Contracts.Tasks;
 using BeautySalonManagement.Domain.Items;
 using CommonLib.Tasks;
 
-namespace BeautySalonManagement.Domain.Contracts.Tasks
+namespace BeautySalonManagement.Tasks
 {
-	public interface IBrandTasks:ITask<Brand>,IPaggingTask<Brand>
+	public class BrandTasks : NHibernateQueryTaskBase<Brand>, IBrandTasks
 	{
-
 	}
 }

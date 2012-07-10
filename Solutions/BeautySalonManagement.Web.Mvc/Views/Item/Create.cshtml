@@ -1,0 +1,46 @@
+﻿@using BeautySalonManagement.Domain.Items
+@model BeautySalonManagement.Web.Mvc.Controllers.ViewModels.ItemViewModel 
+@{
+    ViewBag.Title = "创建";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    创建</h2>
+@using(Html.BeginForm())
+{
+@Html.ValidationSummary()
+@Html.AntiForgeryToken()
+<div class="control-group hidden">
+    @Html.HiddenFor(item => item.Id)
+</div>
+<div class="control-group">
+    @Html.LabelFor(item=>item.Name)
+    @Html.TextBoxFor(item=>item.Name)
+</div>
+<div class="control-group">
+    @Html.LabelFor(item=>item.Description)
+    @Html.TextBoxFor(item=>item.Description,new{@style="height:100px"})
+</div>
+<div class="control-group">
+    @Html.LabelFor(item=>item.Price)
+    @Html.TextBoxFor(item=>item.Price)
+</div>
+<div class="control-group">
+    @Html.LabelFor(item=>item.Cost)
+    @Html.TextBoxFor(item=>item.Cost)
+</div>
+<div class="control-group">
+    @Html.LabelFor(item=>item.Disable)
+    @Html.CheckBoxFor(item=>item.Disable)
+</div>
+<div class="control-group">
+    @Html.LabelFor(item=>item.ItemTypeName)
+    @Html.DropDownListFor(item=>item.ItemTypeName,new SelectList(ItemType.Items,"Name","Desc",Model!=null?Model.ItemTypeName:ItemType.Product.Desc))
+</div>
+<div class="control-group">
+    @Html.LabelFor(item=>item.BrandId)
+    @Html.DropDownListFor(item=>item.BrandId,new SelectList(ViewBag.BrandTasks.FindByAll(),"Id","Name"),Model!=null?Model.BrandId:-1)
+</div>
+<div class="control-group">
+    @Html.SubmitButton("Save", "保存", new { @class = "btn btn-primary" }) @(Html.ActionLink<ItemController>(x => x.Index(null, null), "取消", new { @class = "btn" }))</div>
+} 

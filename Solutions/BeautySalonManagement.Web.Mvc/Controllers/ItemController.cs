@@ -28,6 +28,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 			ItemTask = itemRepository;
 			BrandTasks = brandRepository;
 			CommandProcessor = commandProcessor;
+			ViewBag.BrandTasks = BrandTasks;
 		}
 		[HttpGet]
 		public ActionResult Index(int? pageIndex, GridSortOptions sort)
@@ -80,7 +81,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 			{
 				Mapper.CreateMap<Item, ItemViewModel>();
 				var itemViewModel = Mapper.Map<Item, ItemViewModel>(item);
-				ViewBag.BrandTasks = BrandTasks;
+				
 				return View(itemViewModel);
 			}
 			return new HttpNotFoundResult();
