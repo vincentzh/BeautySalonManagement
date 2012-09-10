@@ -3,5 +3,6 @@
 	public interface IItem : ISaleInfo
 	{
 		IBrand Brand { get; set; }
+		decimal Volume { get; set; }
 	}
 }

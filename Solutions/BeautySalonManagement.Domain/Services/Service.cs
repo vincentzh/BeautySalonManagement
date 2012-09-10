@@ -22,7 +22,6 @@ namespace BeautySalonManagement.Domain.Services
 
 		public virtual decimal Price { get; set; }
 
-		public virtual decimal Cost { get; set; }
 		public virtual bool Disable { get; set; }
 
 		#endregion
