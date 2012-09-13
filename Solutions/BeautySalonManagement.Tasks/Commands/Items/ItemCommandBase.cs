@@ -1,4 +1,4 @@
-﻿using BeautySalonManagement.Domain.Items;
+﻿using BeautySalonManagement.Domain.Articles;
 using SharpArch.Domain.Commands;
 
 namespace BeautySalonManagement.Tasks.Commands.Items

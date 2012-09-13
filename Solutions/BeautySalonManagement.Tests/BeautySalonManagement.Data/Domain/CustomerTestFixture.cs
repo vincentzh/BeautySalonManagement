@@ -34,6 +34,7 @@ namespace BeautySalonManagement.Tests.BeautySalonManagement.Data.Domain
 				customer.MobilePhone = "11111";
 				customer.Name = "testName";
 				customer.Password = "111";
+				customer.Gender = Gender.Female;
 				productRepository.Save(customer);
 				FlushSessionAndEvict(customer);
 			}

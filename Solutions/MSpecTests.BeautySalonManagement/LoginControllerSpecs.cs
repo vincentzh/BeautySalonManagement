@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using BeautySalonManagement.Domain.Contracts.Tasks;
@@ -11,7 +10,6 @@ using CommonLib.Util.Authentications;
 using Machine.Specifications;
 using Machine.Specifications.AutoMocking.Rhino;
 using Machine.Specifications.Mvc;
-using NHibernate;
 using Rhino.Mocks;
 
 namespace MSpecTests.BeautySalonManagement

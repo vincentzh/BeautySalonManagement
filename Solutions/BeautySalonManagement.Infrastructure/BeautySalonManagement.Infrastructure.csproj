@@ -65,44 +65,15 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core">
-      <HintPath>..\..\Packages\Castle.Core.3.0.0.4001\lib\net40-client\Castle.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Castle.Windsor">
-      <HintPath>..\..\Packages\Castle.Windsor.3.0.0.4001\lib\net40\Castle.Windsor.dll</HintPath>
-    </Reference>
-    <Reference Include="CommonServiceLocator.WindsorAdapter">
-      <HintPath>..\..\Packages\CommonServiceLocator.WindsorAdapter.1.0\lib\NET35\CommonServiceLocator.WindsorAdapter.dll</HintPath>
-    </Reference>
-    <Reference Include="FluentNHibernate, Version=1.3.0.727, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+    <Reference Include="FluentNHibernate, Version=1.3.0.733, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\FluentNHibernate.1.3.0.727\lib\FluentNHibernate.dll</HintPath>
-    </Reference>
-    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\Iesi.Collections.3.3.1.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+      <HintPath>..\..\Packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
     </Reference>
     <Reference Include="inflector_extension">
       <HintPath>..\..\Packages\inflector_extension.0.0.7\lib\Net40\inflector_extension.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\..\Packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Mvc">
-      <HintPath>..\..\Packages\Mvc3Futures.3.0.20105.0\lib\Microsoft.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="MindHarbor.ClassEnum">
       <HintPath>..\..\MindLib\MindHarbor.ClassEnum.dll</HintPath>
-    </Reference>
-    <Reference Include="MvcContrib, Version=3.0.100.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\MvcContrib.Mvc3-ci.3.0.100.0\lib\MvcContrib.dll</HintPath>
-    </Reference>
-    <Reference Include="MvcContrib.FluentHtml, Version=3.0.100.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\MvcContrib.Mvc3.FluentHtml-ci.3.0.100.0\lib\MvcContrib.FluentHtml.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\Newtonsoft.Json.4.5.7\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -114,19 +85,10 @@
     <Reference Include="SharpArch.NHibernate, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\SharpArch.NHibernate.2.0.4\lib\NET40\SharpArch.NHibernate.dll</HintPath>
     </Reference>
-    <Reference Include="SharpArch.Web.Mvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\SharpArch.Web.Mvc.Castle.2.0.4\lib\NET40\SharpArch.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.Routing" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\Common\AssemblyVersion.cs">
@@ -150,16 +112,13 @@
     <Compile Include="NHibernateMaps\CustomMap\EmployeeMap.cs" />
     <Compile Include="NHibernateMaps\CustomMap\ItemMap.cs" />
     <Compile Include="NHibernateMaps\CustomMap\PeopleMap.cs" />
+    <Compile Include="NHibernateMaps\CustomMap\SaleInfoMap.cs" />
     <Compile Include="NHibernateMaps\CustomMap\ServiceMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BeautySalonManagement.Domain\BeautySalonManagement.Domain.csproj">
       <Project>{8DEF56CD-601E-443C-9DCE-C4EC54C0B6A6}</Project>
       <Name>BeautySalonManagement.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CommonLib\CommonLib.csproj">
-      <Project>{9CA71118-CD5C-4FA4-A200-7A050F529B67}</Project>
-      <Name>CommonLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +143,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

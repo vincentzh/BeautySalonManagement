@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using AutoMapper;
+using BeautySalonManagement.Domain.Articles;
 using BeautySalonManagement.Domain.Contracts.Tasks;
-using BeautySalonManagement.Domain.Items;
 using BeautySalonManagement.Tasks;
 using BeautySalonManagement.Tasks.Commands.Items;
 using BeautySalonManagement.Web.Mvc.Base;

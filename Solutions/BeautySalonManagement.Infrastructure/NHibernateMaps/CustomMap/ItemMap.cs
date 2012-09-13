@@ -1,6 +1,4 @@
-﻿using BeautySalonManagement.Domain.Interfaces;
-using BeautySalonManagement.Domain.Items;
-using BeautySalonManagement.Domain.UserType;
+﻿using BeautySalonManagement.Domain.Articles;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Automapping.Alterations;
 
@@ -12,7 +10,8 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps.CustomMap
 
 		public void Override(AutoMapping<Item> mapping)
 		{
-			mapping.Map(x => x.Type).CustomType<ItemUserType>().Not.Nullable();
+			mapping.Table("tblItems");
+			mapping.UseUnionSubclassForInheritanceMapping();
 			mapping.References<Brand>(x => x.Brand).Cascade.SaveUpdate().Not.Nullable();
 		}
 

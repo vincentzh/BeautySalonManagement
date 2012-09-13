@@ -1,4 +1,4 @@
-﻿using BeautySalonManagement.Domain.Items;
+﻿using BeautySalonManagement.Domain.Articles;
 using CommonLib.Tasks;
 
 namespace BeautySalonManagement.Domain.Contracts.Tasks

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BeautySalonManagement.Domain.Items;
+using BeautySalonManagement.Domain.Articles;
 using BeautySalonManagement.Tasks.Commands.Items;
 using CommonLib.CommandHandlers;
 using SharpArch.Domain.PersistenceSupport;

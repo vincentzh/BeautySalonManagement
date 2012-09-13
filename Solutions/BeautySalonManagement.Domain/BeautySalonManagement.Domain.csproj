@@ -65,18 +65,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommonServiceLocator.WindsorAdapter">
-      <HintPath>..\..\Packages\CommonServiceLocator.WindsorAdapter.1.0\lib\NET35\CommonServiceLocator.WindsorAdapter.dll</HintPath>
-    </Reference>
-    <Reference Include="FluentNHibernate">
-      <HintPath>..\..\Packages\FluentNHibernate.1.3.0.727\lib\FluentNHibernate.dll</HintPath>
-    </Reference>
-    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\Iesi.Collections.3.3.1.4000\lib\Net35\Iesi.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\..\Packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
-    </Reference>
     <Reference Include="MindHarbor.ClassEnum">
       <HintPath>..\..\MindLib\MindHarbor.ClassEnum.dll</HintPath>
     </Reference>
@@ -89,15 +77,6 @@
     <Reference Include="MindHarbor.SingletonUtil">
       <HintPath>..\..\MindLib\MindHarbor.SingletonUtil.dll</HintPath>
     </Reference>
-    <Reference Include="MvcContrib">
-      <HintPath>..\..\Packages\MvcContrib.Mvc3-ci.3.0.100.0\lib\MvcContrib.dll</HintPath>
-    </Reference>
-    <Reference Include="MvcContrib.FluentHtml">
-      <HintPath>..\..\Packages\MvcContrib.Mvc3.FluentHtml-ci.3.0.100.0\lib\MvcContrib.FluentHtml.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\Newtonsoft.Json.4.5.7\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Packages\NHibernate.3.3.1.4000\lib\Net35\NHibernate.dll</HintPath>
@@ -108,20 +87,13 @@
     <Reference Include="SharpArch.NHibernate, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\SharpArch.NHibernate.2.0.4\lib\NET40\SharpArch.NHibernate.dll</HintPath>
     </Reference>
-    <Reference Include="SharpArch.Web.Mvc">
-      <HintPath>..\..\Packages\SharpArch.Web.Mvc.Castle.2.0.4\lib\NET40\SharpArch.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Data" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Routing" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\Common\AssemblyVersion.cs">
@@ -130,6 +102,7 @@
     <Compile Include="..\..\Common\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Articles\SaleInfo.cs" />
     <Compile Include="Contracts\Tasks\IBrandTasks.cs" />
     <Compile Include="Contracts\Tasks\ICustomerTasks.cs" />
     <Compile Include="Contracts\Tasks\IEmployeeTasks.cs" />
@@ -141,9 +114,9 @@
     <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Interfaces\ISaleInfo.cs" />
     <Compile Include="Interfaces\IService.cs" />
-    <Compile Include="Items\Brand.cs" />
-    <Compile Include="Items\Item.cs" />
-    <Compile Include="Items\ItemType.cs" />
+    <Compile Include="Articles\Brand.cs" />
+    <Compile Include="Articles\Item.cs" />
+    <Compile Include="Articles\ItemType.cs" />
     <Compile Include="Peoples\ContactInfo.cs" />
     <Compile Include="Peoples\Customer.cs" />
     <Compile Include="Peoples\Employee.cs" />
@@ -158,7 +131,7 @@
     <Compile Include="Permissions\PermissionGroup.cs" />
     <Compile Include="Permissions\PermissionGroupAndControllerActionRelation.cs" />
     <Compile Include="Permissions\PermissionRepository.cs" />
-    <Compile Include="Services\Service.cs" />
+    <Compile Include="Articles\Service.cs" />
     <Compile Include="UserType\GenderUserType.cs" />
     <Compile Include="UserType\ItemUserType.cs" />
   </ItemGroup>

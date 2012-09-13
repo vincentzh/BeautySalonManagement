@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
-using BeautySalonManagement.Domain.Items;
+using BeautySalonManagement.Domain.Articles;
 
 namespace BeautySalonManagement.Web.Mvc.Controllers.ViewModels
 {

@@ -1,4 +1,4 @@
-﻿using BeautySalonManagement.Domain.Services;
+﻿using BeautySalonManagement.Domain.Articles;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Automapping.Alterations;
 
@@ -10,6 +10,8 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps.CustomMap
 
 		public void Override(AutoMapping<Service> mapping)
 		{
+			mapping.Table("tblServices");
+			mapping.UseUnionSubclassForInheritanceMapping();
 			mapping.HasManyToMany(x => x.Items).Access.CamelCaseField().AsSet().LazyLoad().Cascade.SaveUpdate().Table("tblServiceAndItems");
 		}
 

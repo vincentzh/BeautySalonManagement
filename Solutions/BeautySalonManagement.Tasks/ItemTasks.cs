@@ -1,5 +1,5 @@
-﻿using BeautySalonManagement.Domain.Contracts.Tasks;
-using BeautySalonManagement.Domain.Items;
+﻿using BeautySalonManagement.Domain.Articles;
+using BeautySalonManagement.Domain.Contracts.Tasks;
 using CommonLib.QueryOver;
 using CommonLib.Tasks;
 

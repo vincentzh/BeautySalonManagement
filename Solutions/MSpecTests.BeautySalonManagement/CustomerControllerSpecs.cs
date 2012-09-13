@@ -28,7 +28,7 @@ namespace MSpecTests.BeautySalonManagement
 		{
 			CustomerTasks = DependencyOf<ICustomerTasks>();
 			commandProcessor = DependencyOf<ICommandProcessor>();
-			customerController = MockRepository.GenerateStub<CustomerController>(CustomerTasks, commandProcessor);
+			customerController = MockRepository.GenerateMock<CustomerController>(CustomerTasks, commandProcessor);
 			customerViewModel = new CustomerViewModel
 			                    	{
 			                    			Address = "test",
