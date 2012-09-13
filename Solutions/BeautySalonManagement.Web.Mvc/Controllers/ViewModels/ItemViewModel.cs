@@ -8,6 +8,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers.ViewModels
 	public class ItemViewModel
 	{
 		[HiddenInput]
+		[DisplayName("编号")]
 		public int Id { get; set; }
 		[Required(ErrorMessage = "请输入名称")]
 		[DisplayName("名称")]
@@ -16,12 +17,9 @@ namespace BeautySalonManagement.Web.Mvc.Controllers.ViewModels
 		public string Description { get; set; }
 		[Required(ErrorMessage = "请输入售价")]
 		[DisplayName("售价")]
-		[DataType(DataType.Currency)]
+		[DataType(DataType.Currency,ErrorMessage = "请输入售价")]
 		public decimal Price { get; set; }
-		[Required(ErrorMessage = "请输入成本")]
-		[DisplayName("成本")]
-		[DataType(DataType.Currency)]
-		public decimal Cost { get; set; }
+	
 		[DisplayName("停止销售")]
 		public bool Disable { get; set; }
 		[Required(ErrorMessage = "请选择类别")]

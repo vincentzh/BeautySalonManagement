@@ -52,11 +52,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Packages\AutoMapper.2.1.267\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="Castle.Core">
-      <HintPath>..\..\Packages\Castle.Core.3.0.0.4001\lib\net40-client\Castle.Core.dll</HintPath>
+    <Reference Include="Castle.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\Castle.Core.3.1.0\lib\net40-client\Castle.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Castle.Windsor">
-      <HintPath>..\..\Packages\Castle.Windsor.3.0.0.4001\lib\net40\Castle.Windsor.dll</HintPath>
+    <Reference Include="Castle.Windsor, Version=3.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\Castle.Windsor.3.1.0\lib\net40\Castle.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="CommonServiceLocator.WindsorAdapter">
       <HintPath>..\..\Packages\CommonServiceLocator.WindsorAdapter.1.0\lib\NET35\CommonServiceLocator.WindsorAdapter.dll</HintPath>
@@ -90,11 +92,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Packages\MvcContrib.Mvc3.FluentHtml-ci.3.0.100.0\lib\MvcContrib.FluentHtml.dll</HintPath>
     </Reference>
-    <Reference Include="MvcPaging">
-      <HintPath>..\..\Packages\MvcPaging.2.0.2\lib\net40\MvcPaging.dll</HintPath>
+    <Reference Include="MvcPaging, Version=2.0.3.14, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\MvcPaging.2.0.3\lib\net40\MvcPaging.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\Newtonsoft.Json.4.5.7\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\Packages\Newtonsoft.Json.4.5.9\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -177,12 +180,12 @@
     <Compile Include="Helpers\FrontMenu.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\themes\bootstrap-responsive.css" />
-    <Content Include="Content\themes\bootstrap-responsive.min.css" />
-    <Content Include="Content\themes\bootstrap.css" />
-    <Content Include="Content\themes\bootstrap.min.css" />
-    <Content Include="Content\images\glyphicons-halflings-white.png" />
-    <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\js\jquery-1.8.1-vsdoc.js" />
+    <Content Include="Content\js\jquery-1.8.1.js" />
+    <Content Include="Content\js\jquery-1.8.1.min.js" />
+    <Content Include="Content\js\jquery-ui-1.8.23.js" />
+    <Content Include="Content\js\jquery-ui-1.8.23.min.js" />
+    <Content Include="Content\js\modernizr-2.6.2.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -237,6 +240,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\bootstrap-responsive.css" />
+    <Content Include="Content\themes\bootstrap-responsive.min.css" />
+    <Content Include="Content\themes\bootstrap.css" />
+    <Content Include="Content\themes\bootstrap.min.css" />
     <Content Include="Content\themes\site.css" />
     <Content Include="Content\themes\images\glyphicons-halflings-white.png" />
     <Content Include="Content\themes\images\glyphicons-halflings.png" />
@@ -245,15 +252,9 @@
     <Content Include="Content\js\jQuery-Datepicker-zh.js" />
     <Content Include="ecatalog.cfg.xml" />
     <Content Include="Global.asax" />
-    <Content Include="Content\js\modernizr-2.5.3.js" />
     <Content Include="Content\js\jquery.validate-vsdoc.js" />
     <Content Include="Content\js\jquery.validate.js" />
     <Content Include="Content\js\jquery.validate.min.js" />
-    <Content Include="Content\js\jquery-1.7.2-vsdoc.js" />
-    <Content Include="Content\js\jquery-1.7.2.js" />
-    <Content Include="Content\js\jquery-1.7.2.min.js" />
-    <Content Include="Content\js\jquery-ui-1.8.20.js" />
-    <Content Include="Content\js\jquery-ui-1.8.20.min.js" />
     <Content Include="Content\js\jquery.validate.unobtrusive.js" />
     <Content Include="Content\js\jquery.validate.unobtrusive.min.js" />
     <Content Include="Content\js\bootstrap.js" />

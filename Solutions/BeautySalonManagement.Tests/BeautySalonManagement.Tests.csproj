@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+
     <Reference Include="Castle.Core">
       <HintPath>..\..\Packages\Castle.Core.3.1.0\lib\net40-client\Castle.Core.dll</HintPath>
     </Reference>
@@ -58,6 +59,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Packages\NHibernate.3.3.1.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
+
     <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\..\Packages\NUnitLib.2.5.10.11092\lib\net\nunit.framework.dll</HintPath>
     </Reference>
