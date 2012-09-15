@@ -19,7 +19,9 @@ namespace BeautySalonManagement.Web.Mvc.Controllers.ViewModels
 		[DisplayName("售价")]
 		[DataType(DataType.Currency,ErrorMessage = "请输入售价")]
 		public decimal Price { get; set; }
-	
+		[DisplayName("成本")]
+		[DataType(DataType.Currency,ErrorMessage = "请输入成本")]
+		public decimal Cost { get; set; }
 		[DisplayName("停止销售")]
 		public bool Disable { get; set; }
 		[Required(ErrorMessage = "请选择类别")]

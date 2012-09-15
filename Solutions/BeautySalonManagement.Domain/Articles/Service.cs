@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using BeautySalonManagement.Domain.Interfaces;
 using MindHarbor.CollectionWrappers;
-using SharpArch.Domain.DomainModel;
 
 namespace BeautySalonManagement.Domain.Articles
 {
@@ -14,6 +13,15 @@ namespace BeautySalonManagement.Domain.Articles
 			get { return new ReadonlyCollection<Item>(items); }
 		}
 
-		
+		public virtual void AddItem(Item item)
+		{
+			if (!items.Contains(item))
+				items.Add(item);
+		}
+		public virtual bool RemoveItem(Item item)
+		{
+			return items.Remove(item);
+		}
+
 	}
 }

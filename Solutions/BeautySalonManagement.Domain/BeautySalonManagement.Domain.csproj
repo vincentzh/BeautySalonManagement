@@ -114,6 +114,7 @@
     <Compile Include="Contracts\Tasks\IEmployeeTasks.cs" />
     <Compile Include="Contracts\Tasks\IPersonTasks.cs" />
     <Compile Include="Contracts\Tasks\IItemTasks.cs" />
+    <Compile Include="Contracts\Tasks\IServiceTasks.cs" />
     <Compile Include="DomainSession.cs" />
     <Compile Include="DomainSetting.cs" />
     <Compile Include="Interfaces\IBrand.cs" />

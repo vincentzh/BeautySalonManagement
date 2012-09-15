@@ -1,7 +1,7 @@
 ﻿using BeautySalonManagement.Domain.Articles;
 using SharpArch.Domain.Commands;
 
-namespace BeautySalonManagement.Tasks.Commands.Items
+namespace BeautySalonManagement.Tasks.Commands.Articles
 {
 	public class ItemCommandBase : CommandBase
 	{

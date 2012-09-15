@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using BeautySalonManagement.Domain.Articles;
-using BeautySalonManagement.Tasks.Commands.Items;
+using BeautySalonManagement.Tasks.Commands.Articles;
 using CommonLib.CommandHandlers;
 using SharpArch.Domain.PersistenceSupport;
 
-namespace BeautySalonManagement.Tasks.CommandHandlers.Items
+namespace BeautySalonManagement.Tasks.CommandHandlers.Articles
 {
 	public class AddItemCommandHandler : CommandHandlerWithResult<AddItemCommand, IRepository<Item>, Item>
 	{

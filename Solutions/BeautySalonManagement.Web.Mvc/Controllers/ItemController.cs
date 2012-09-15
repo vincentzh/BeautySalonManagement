@@ -3,7 +3,7 @@ using AutoMapper;
 using BeautySalonManagement.Domain.Articles;
 using BeautySalonManagement.Domain.Contracts.Tasks;
 using BeautySalonManagement.Tasks;
-using BeautySalonManagement.Tasks.Commands.Items;
+using BeautySalonManagement.Tasks.Commands.Articles;
 using BeautySalonManagement.Web.Mvc.Base;
 using BeautySalonManagement.Web.Mvc.Controllers.ViewModels;
 using CommonLib.CommandHandlers;
@@ -28,12 +28,13 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 			ItemTask = itemRepository;
 			BrandTasks = brandRepository;
 			CommandProcessor = commandProcessor;
-			ViewBag.BrandTasks = BrandTasks;
+			
 		}
 		[HttpGet]
 		public ActionResult Index(int? pageIndex, GridSortOptions sort)
 		{
 			ViewBag.Sort = sort;
+			
 
 
 			return View(new CustomPaginationHelper<Item>(ItemTask).Pagination(pageIndex, sort));
@@ -45,6 +46,8 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 		[HttpGet]
 		public ActionResult Create()
 		{
+			ViewBag.Brands = BrandTasks.FindByAll();
+			ViewBag.Items = new { ItemType.Product, ItemType.Consumble };
 			return View();
 		}
 

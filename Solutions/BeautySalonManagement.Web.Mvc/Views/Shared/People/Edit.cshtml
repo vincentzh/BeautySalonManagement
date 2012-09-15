@@ -19,13 +19,16 @@
 <div class="control-group">
     @Html.LabelFor(people => people.Birthday)
     @Html.TextBoxFor(people => people.Birthday, new { @class = "date" })
+    @Html.ValidationMessageFor(people=>people.Birthday)
 </div>
 <div class="control-group">
     @Html.LabelFor(people => people.MobilePhone)
     @Html.TextBoxFor(people => people.MobilePhone)
+    @Html.ValidationMessageFor(people=>people.MobilePhone)
 </div>
 <div class="control-group">
     @Html.LabelFor(people => people.Address)
     @Html.TextBoxFor(people => people.Address)
+    @Html.ValidationMessageFor(people=>people.Address)
 </div>
 

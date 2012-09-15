@@ -11,10 +11,11 @@
 @using(Html.BeginForm())
 {
 	@Html.AntiForgeryToken()
-    @Html.ValidationSummary()
+   
 		<div class="control-group">
 			@Html.LabelFor(x=>x.CustomerCardNo)
             @Html.TextBoxFor(x => x.CustomerCardNo)
+            @Html.ValidationMessageFor(x => x.CustomerCardNo)
 		</div>
 		@Html.Partial("People/Edit", Model)
          @Html.Partial("People/Password", Model)

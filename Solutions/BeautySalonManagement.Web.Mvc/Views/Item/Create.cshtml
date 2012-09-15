@@ -1,5 +1,4 @@
 ﻿@using BeautySalonManagement.Domain.Articles
-@using BeautySalonManagement.Domain.Items
 @model BeautySalonManagement.Web.Mvc.Controllers.ViewModels.ItemViewModel 
 @{
     ViewBag.Title = "创建";
@@ -33,11 +32,11 @@
 </div>
 <div class="control-group">
     @Html.LabelFor(item=>item.ItemTypeName)
-    @Html.DropDownListFor(item=>item.ItemTypeName,new SelectList(ItemType.Items,"Name","Desc",Model!=null?Model.ItemTypeName:ItemType.ForSale.Desc))
+    @Html.DropDownListFor(item=>item.ItemTypeName,new SelectList(ViewBag.Items,"Name","Desc",Model!=null?Model.ItemTypeName:ItemType.Product.Desc))
 </div>
 <div class="control-group">
     @Html.LabelFor(item=>item.BrandId)
-    @Html.DropDownListFor(item=>item.BrandId,new SelectList(ViewBag.BrandTasks.FindByAll(),"Id","Name"),Model!=null?Model.BrandId:-1)
+    @Html.DropDownListFor(item=>item.BrandId,new SelectList(ViewBag.Brands,"Id","Name"),Model!=null?Model.BrandId:-1)
 </div>
 <div class="control-group">
     @Html.SubmitButton("Save", "保存", new { @class = "btn btn-primary" }) @(Html.ActionLink<ItemController>(x => x.Index(null, null), "取消", new { @class = "btn" }))</div>

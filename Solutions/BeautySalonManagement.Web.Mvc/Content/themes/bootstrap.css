@@ -4147,7 +4147,7 @@ input[type="submit"].btn.btn-mini {
   *z-index: 2;
   margin-bottom: 20px;
   overflow: visible;
-  color: #777777;
+  color: #777
 }
 
 .navbar-inner {
@@ -4317,7 +4317,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar-fixed-top,
 .navbar-fixed-bottom {
-  position: fixed;
+  position:absolute;
   right: 0;
   left: 0;
   z-index: 1030;

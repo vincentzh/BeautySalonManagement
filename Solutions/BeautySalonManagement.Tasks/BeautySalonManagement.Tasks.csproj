@@ -69,7 +69,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Packages\AutoMapper.2.1.267\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
-
     <Reference Include="MindHarbor.ClassEnum, Version=3.0.0.1001, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -100,21 +99,22 @@
     <Compile Include="CommandHandlers\Customers\EditCustomerCommandHandler.cs" />
     <Compile Include="CommandHandlers\Employees\AddEmployeeCommandHandler.cs" />
     <Compile Include="CommandHandlers\Employees\EditEmployeeCommandHandler.cs" />
-    <Compile Include="CommandHandlers\Items\AddItemCommandHandler.cs" />
-    <Compile Include="CommandHandlers\Items\EditItemCommandHandler.cs" />
-    <Compile Include="Commands\Items\AddItemCommand.cs" />
+    <Compile Include="CommandHandlers\Articles\AddItemCommandHandler.cs" />
+    <Compile Include="CommandHandlers\Articles\EditItemCommandHandler.cs" />
+    <Compile Include="Commands\Articles\AddItemCommand.cs" />
     <Compile Include="Commands\Employees\AddEmployeeCommand.cs" />
     <Compile Include="Commands\Employees\EditEmployeeCommand.cs" />
     <Compile Include="Commands\Employees\EmployeeCommandBase.cs" />
     <Compile Include="Commands\Customers\AddCustomerCommand.cs" />
     <Compile Include="Commands\Customers\CustomerCommandBase.cs" />
     <Compile Include="Commands\Customers\EditCustomerCommand.cs" />
-    <Compile Include="Commands\Items\EditItemCommand.cs" />
-    <Compile Include="Commands\Items\ItemCommandBase.cs" />
+    <Compile Include="Commands\Articles\EditItemCommand.cs" />
+    <Compile Include="Commands\Articles\ItemCommandBase.cs" />
     <Compile Include="Commands\People\PeopleCommandBase.cs" />
     <Compile Include="CustomerTasks.cs" />
     <Compile Include="EmployeeTasks.cs" />
     <Compile Include="ItemTasks.cs" />
+    <Compile Include="ServiceTasks.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BeautySalonManagement.Domain\BeautySalonManagement.Domain.csproj">
