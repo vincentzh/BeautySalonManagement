@@ -59,10 +59,10 @@ namespace CommonLib.CommandHandlers
 		private  void ValidationEntity(CommandResult commandResult)
 		{
 			if (CurrentEntity == null)
-				throw new NullReferenceException("CurrentEntity Couldn't is Null");
+				throw new NullReferenceException("CurrentEntity is Null!");
 			foreach (ValidationResult entityValidationResults in CurrentEntity.ValidationResults())
 			{
-				commandResult.ErrorMessages.Add(entityValidationResults.ErrorMessage);
+				commandResult.ModelState.AddModelError("",entityValidationResults.ErrorMessage);
 				if (commandResult.Success)
 					commandResult.Success = false;
 			}
@@ -75,7 +75,7 @@ namespace CommonLib.CommandHandlers
 		{
 			foreach (ValidationResult commandValidationResults in CurrentCommand.ValidationResults())
 			{
-				commandResult.ErrorMessages.Add(commandValidationResults.ErrorMessage);
+				commandResult.ModelState.AddModelError("",commandValidationResults.ErrorMessage);
 				if (commandResult.Success)
 					commandResult.Success = false;
 			}

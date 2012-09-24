@@ -8,7 +8,7 @@
     创建</h2>
 @using(Html.BeginForm())
 {
-@Html.ValidationSummary()
+@Html.Partial("DisplayTemplates/CustomErrorSummary")
 @Html.AntiForgeryToken()
 <div class="control-group hidden">
     @Html.HiddenFor(item => item.Id)

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "品牌列表";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using MvcContrib.UI.Grid
+@model MvcContrib.Pagination.IPagination<BeautySalonManagement.Domain.Articles.Brand>
+<h2>品牌列表</h2>
+<div align="right">
+	@(Html.ActionLink<BrandController>(x => x.Create(), "新建品牌", new {@class = "btn btn-primary"}))</div>
+@Html.Grid(Model).Empty("没有数据").Attributes(@class =>  "table table-striped").Columns(column =>
+{
+	column.For(x => x.Id).Visible(false).Sortable(true);
+	column.For(x => x.Name).Named("品牌名称").Sortable(true);
+	column.For(x => x.Description).Named("描述").Sortable(true);
+	
+	column.Custom(x => @Html.ActionLink<BrandController>(action => action.Edit(x.Id), "编辑"));
+	column.Custom(x => @Html.ActionLink<BrandController>(action => action.Delete(x.Id), "删除"));
+}).Sort(ViewBag.Sort)
+@Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItems).Options(x => x.MaxNrOfPages(5).DisplayTemplate("BootstrapPagination"))

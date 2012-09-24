@@ -30,7 +30,7 @@ namespace BeautySalonManagement.Tasks.CommandHandlers.Employees
 
 			if (CurrentEntity == null || CurrentEntity.Id != CurrentCommand.Id)
 			{
-				commandResult.ErrorMessages.Add("提交的客户信息有误,修改失败");
+				commandResult.ModelState.AddModelError("","提交的客户信息有误,修改失败");
 				commandResult.Success = false;
 			}
 		}

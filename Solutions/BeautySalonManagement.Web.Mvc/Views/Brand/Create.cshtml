@@ -1,0 +1,26 @@
+﻿@model BeautySalonManagement.Web.Mvc.Controllers.ViewModels.BrandViewModel
+@{
+    ViewBag.Title = "创建";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>创建</h2>
+@using(Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.Partial("DisplayTemplates/CustomErrorSummary")
+	<div class="control-group">
+		
+	
+		@Html.LabelFor(brand => brand.Name)
+		@Html.TextBoxFor(brand => brand.Name)
+		@Html.ValidationMessageFor(brand => brand.Name)
+	</div>
+	<div class="control-group">
+		@Html.LabelFor(brand => brand.Description)
+		@Html.TextBoxFor(brand => brand.Description)
+		@Html.ValidationMessageFor(brand => brand.Description)
+	</div>
+    <div class="control-group">
+    @Html.SubmitButton("Save", "保存", new { @class = "btn btn-primary" }) @(Html.ActionLink<BrandController>(x => x.Index(null, null), "取消", new { @class = "btn" }))</div>
+}

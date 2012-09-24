@@ -47,7 +47,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 		public ActionResult Create()
 		{
 			ViewBag.Brands = BrandTasks.FindByAll();
-			ViewBag.Items = new { ItemType.Product, ItemType.Consumble };
+			ViewBag.Items =new[]{ ItemType.Product, ItemType.Consumble };
 			return View();
 		}
 
@@ -116,6 +116,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 		//
 		// GET: /Item/Delete/5
 		[HttpGet]
+		[Transaction]
 		public ActionResult Delete(int id)
 		{
 			Item item = ItemTask.Get(id);
@@ -124,7 +125,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 				ItemTask.Delete(item);
 				return this.RedirectToAction(x=>x.Index(null,null));
 			}
-			return View();
+			return new HttpNotFoundResult();
 		}
 
 		

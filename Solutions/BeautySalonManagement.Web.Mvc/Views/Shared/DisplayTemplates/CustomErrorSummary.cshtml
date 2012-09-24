@@ -1,0 +1,14 @@
+﻿@{
+	var modelStatesErrors = ViewData.ModelState.Where(x => x.Key == "").SelectMany(y => y.Value.Errors).ToList();
+}
+@if (modelStatesErrors.Any())
+{
+	<div class="alert alert-error">
+		<button type="button" class="close" data-dismiss="alert">&#215;</button>
+		<h4>错误!</h4>
+		@foreach (var err in modelStatesErrors)
+		{
+			@err.ErrorMessage<br />
+		}
+      </div>
+}

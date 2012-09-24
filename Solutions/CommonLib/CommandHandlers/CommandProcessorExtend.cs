@@ -19,10 +19,9 @@ namespace CommonLib.CommandHandlers
 			{
 				if (!x.Success)
 				{
-					foreach (var errorMessage in x.ErrorMessages)
-					{
-						model.AddModelError("", errorMessage);
-					}
+					
+						model.Merge(x.ModelState);
+					
 				}
 			});
 		}

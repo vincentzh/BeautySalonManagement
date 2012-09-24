@@ -34,7 +34,7 @@ namespace BeautySalonManagement.Tasks.CommandHandlers.Articles
 				if (brand == null)
 				{
 					commandResult.Success = false;
-					commandResult.ErrorMessages.Add("请选择一个品牌");
+					commandResult.ModelState.AddModelError("","请选择一个品牌");
 				}
 			}
 		}

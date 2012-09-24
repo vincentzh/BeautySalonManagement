@@ -31,7 +31,7 @@ namespace BeautySalonManagement.Tasks.CommandHandlers.Customers
 		{
 			if (CurrentEntity == null || CurrentEntity.CustomerCardNo != CurrentCommand.CustomerCardNo || CurrentEntity.Id != CurrentCommand.Id)
 			{
-				commandResult.ErrorMessages.Add("提交的客户信息有误,修改失败");
+				commandResult.ModelState.AddModelError("","提交的客户信息有误,修改失败");
 				commandResult.Success = false;
 			}
 		}
