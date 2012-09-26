@@ -78,7 +78,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 			if (ModelState.IsValid)
 			{
 				var editBrandCommand = new EditBrandCommand();
-				Mapper.CreateMap<CustomerViewModel, EditBrandCommand>();
+				Mapper.CreateMap<BrandViewModel, EditBrandCommand>();
 				Mapper.Map(brandViewModel, editBrandCommand);
 				CommandProcessor.Process<EditBrandCommand, CommandResult>(editBrandCommand, ModelState);
 

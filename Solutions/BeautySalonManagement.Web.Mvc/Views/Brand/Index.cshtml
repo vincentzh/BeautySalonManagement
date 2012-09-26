@@ -6,7 +6,7 @@
 @using MvcContrib.UI.Grid
 @model MvcContrib.Pagination.IPagination<BeautySalonManagement.Domain.Articles.Brand>
 <h2>品牌列表</h2>
-<div align="right">
+<div  align="right">
 	@(Html.ActionLink<BrandController>(x => x.Create(), "新建品牌", new {@class = "btn btn-primary"}))</div>
 @Html.Grid(Model).Empty("没有数据").Attributes(@class =>  "table table-striped").Columns(column =>
 {

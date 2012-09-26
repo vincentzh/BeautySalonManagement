@@ -113,6 +113,7 @@
     <Compile Include="Contracts\Tasks\IBrandTasks.cs" />
     <Compile Include="Contracts\Tasks\ICustomerTasks.cs" />
     <Compile Include="Contracts\Tasks\IEmployeeTasks.cs" />
+    <Compile Include="Contracts\Tasks\IEquipmentTasks.cs" />
     <Compile Include="Contracts\Tasks\IPersonTasks.cs" />
     <Compile Include="Contracts\Tasks\IItemTasks.cs" />
     <Compile Include="Contracts\Tasks\IServiceTasks.cs" />

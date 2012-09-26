@@ -96,7 +96,9 @@
     </Compile>
     <Compile Include="BrandTasks.cs" />
     <Compile Include="CommandHandlers\Articles\AddBrandCommandHandler.cs" />
+    <Compile Include="CommandHandlers\Articles\AddEquipmentCommandHandler.cs" />
     <Compile Include="CommandHandlers\Articles\EditBrandCommandHandler.cs" />
+    <Compile Include="CommandHandlers\Articles\EditEquipmentCommandHandler.cs" />
     <Compile Include="CommandHandlers\Customers\AddCustomerCommandHandler.cs" />
     <Compile Include="CommandHandlers\Customers\EditCustomerCommandHandler.cs" />
     <Compile Include="CommandHandlers\Employees\AddEmployeeCommandHandler.cs" />
@@ -104,9 +106,12 @@
     <Compile Include="CommandHandlers\Articles\AddItemCommandHandler.cs" />
     <Compile Include="CommandHandlers\Articles\EditItemCommandHandler.cs" />
     <Compile Include="Commands\Articles\AddBrandCommand.cs" />
+    <Compile Include="Commands\Articles\AddEquipmentCommand.cs" />
     <Compile Include="Commands\Articles\AddItemCommand.cs" />
     <Compile Include="Commands\Articles\BrandCommandBase.cs" />
     <Compile Include="Commands\Articles\EditBrandCommand.cs" />
+    <Compile Include="Commands\Articles\EditEquipmentCommand.cs" />
+    <Compile Include="Commands\Articles\EquipmentCommandBase.cs" />
     <Compile Include="Commands\Employees\AddEmployeeCommand.cs" />
     <Compile Include="Commands\Employees\EditEmployeeCommand.cs" />
     <Compile Include="Commands\Employees\EmployeeCommandBase.cs" />
@@ -118,6 +123,7 @@
     <Compile Include="Commands\People\PeopleCommandBase.cs" />
     <Compile Include="CustomerTasks.cs" />
     <Compile Include="EmployeeTasks.cs" />
+    <Compile Include="EquimentTasks.cs" />
     <Compile Include="ItemTasks.cs" />
     <Compile Include="ServiceTasks.cs" />
   </ItemGroup>
