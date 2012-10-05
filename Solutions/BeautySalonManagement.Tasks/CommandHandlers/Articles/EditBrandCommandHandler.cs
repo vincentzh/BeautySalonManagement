@@ -17,9 +17,10 @@ namespace BeautySalonManagement.Tasks.CommandHandlers.Articles
 
 		public override void HandleEntity()
 		{
+			
+			Mapper.CreateMap<EditBrandCommand, Brand>().ForMember(x => x.Id, o => o.Ignore()).ForMember(x=>x.Name,o=>o.Ignore());
 			CurrentEntity = CurrentRepostiory.Get(CurrentCommand.Id);
-			Mapper.CreateMap<EditBrandCommand, Brand>().ForMember(x => x.Id, o => o.Ignore());
-			CurrentEntity = Mapper.Map<EditBrandCommand, Brand>(CurrentCommand);
+			Mapper.Map(CurrentCommand,CurrentEntity);
 		}
 	}
 }

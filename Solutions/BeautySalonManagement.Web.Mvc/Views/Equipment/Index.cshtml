@@ -2,11 +2,11 @@
 @model MvcContrib.Pagination.IPagination<BeautySalonManagement.Domain.Articles.Equipment>
 
 @{
-	ViewBag.Title = "设备列表";
+    ViewBag.Title = "器械列表";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>title</h2>
+<h2>器械列表</h2>
 <div  style="text-align: right;">	@(Html.ActionLink<EquipmentController>(x => x.Create(), "新增器械", new { @class = "btn btn-primary" }))</div>
 @Html.Grid(Model).Empty("没有数据").Attributes(@class => "table table-striped").Columns(column =>
 {

@@ -19,7 +19,7 @@ namespace BeautySalonManagement.Tasks.CommandHandlers.Articles
 		{
 			CurrentEntity = CurrentRepostiory.Get(CurrentCommand.Id);
 			Mapper.CreateMap<EditEquipmentCommand, Equipment>().ForMember(x => x.Id, o => o.Ignore());
-			CurrentEntity = Mapper.Map<EditEquipmentCommand, Equipment>(CurrentCommand);
+			 Mapper.Map(CurrentCommand,CurrentEntity);
 		}
 	}
 }

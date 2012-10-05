@@ -48,9 +48,9 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				var addEquipmentCommand = new AddEquipmentCommand();
-				Mapper.CreateMap<EquipmentViewModel, AddEmployeeCommand>();
-				Mapper.Map(equipmentViewModel, addEquipmentCommand);
+				//var addEquipmentCommand = new AddEquipmentCommand();
+				Mapper.CreateMap<EquipmentViewModel, AddEquipmentCommand>().ForMember(view => view.Id, o => o.Ignore());
+				var addEquipmentCommand=Mapper.Map<EquipmentViewModel, AddEquipmentCommand>(equipmentViewModel);
 
 				_commandProcessor.Process<AddEquipmentCommand, CommandResult>(addEquipmentCommand, ModelState);
 				if (!ModelState.IsValid)

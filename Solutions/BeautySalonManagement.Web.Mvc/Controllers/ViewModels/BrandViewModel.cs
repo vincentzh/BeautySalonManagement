@@ -1,15 +1,18 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace BeautySalonManagement.Web.Mvc.Controllers.ViewModels
 {
 	public class BrandViewModel
 	{
+		[HiddenInput]
+		public int Id { get; set; }
 		[DisplayName("品牌名称")]
 		[Required(ErrorMessage = "请输入品牌名称")]
-		public virtual string Name { get; set; }
+		public  string Name { get; set; }
 
 		[DisplayName("描述")]
-		public virtual string Description { get; set; }
+		public  string Description { get; set; }
 	}
 }
