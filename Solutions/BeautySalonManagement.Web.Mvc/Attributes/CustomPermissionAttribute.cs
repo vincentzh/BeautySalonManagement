@@ -1,7 +1,6 @@
 ﻿using System.Web.Mvc;
 using BeautySalonManagement.Domain;
 using BeautySalonManagement.Domain.Permissions;
-using Castle.Windsor;
 using Microsoft.Practices.ServiceLocation;
 
 namespace BeautySalonManagement.Web.Mvc.Attributes

@@ -18,6 +18,8 @@ using SharpArch.NHibernate.Web.Mvc;
 
 namespace BeautySalonManagement.Web.Mvc.Controllers
 {
+	
+		
 	public class BrandController : CustomControllerBase
     {
 		IBrandTasks BrandTasks;
@@ -51,7 +53,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 			}
 			return View();
 		}
-
+		[Authorize]
 		[HttpGet]
 		public ActionResult Index(int? pageIndex, GridSortOptions sort)
 		{

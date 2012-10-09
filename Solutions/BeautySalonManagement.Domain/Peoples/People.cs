@@ -8,9 +8,9 @@ namespace BeautySalonManagement.Domain.Peoples
 {
 	public abstract class People : Entity, IEntityHasPassword
 	{
-		DateTime createDate = DateTime.Now;
-		string password;
-		string salt = RandomStringGenerator.GenerateStrings(24);
+		DateTime _createDate = DateTime.Now;
+		string _password;
+		string _salt = RandomStringGenerator.GenerateStrings(24);
 
 
 		public virtual string Name { get; set; }
@@ -25,8 +25,8 @@ namespace BeautySalonManagement.Domain.Peoples
 
 		public virtual DateTime CreateDate
 		{
-			get { return createDate; }
-			protected set { createDate = value; }
+			get { return _createDate; }
+			protected set { _createDate = value; }
 		}
 
 		#region IEntityHasPassword Members
@@ -35,19 +35,19 @@ namespace BeautySalonManagement.Domain.Peoples
 		{
 			get
 			{
-				if (!string.IsNullOrWhiteSpace(password))
+				if (!string.IsNullOrWhiteSpace(_password))
 				{
-					return EncryptionUtil.Decrypt(password, Salt);
+					return EncryptionUtil.Decrypt(_password, Salt);
 				}
 				return null;
 			}
-			set { password = EncryptionUtil.Encrypt(value, Salt); }
+			set { _password = EncryptionUtil.Encrypt(value, Salt); }
 		}
 
 		public virtual string Salt
 		{
-			get { return salt; }
-			protected set { salt = value; }
+			get { return _salt; }
+			protected set { _salt = value; }
 		}
 
 		#endregion

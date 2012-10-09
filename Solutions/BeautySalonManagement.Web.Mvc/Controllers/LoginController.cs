@@ -6,21 +6,20 @@ using BeautySalonManagement.Web.Mvc.Base;
 using BeautySalonManagement.Web.Mvc.Controllers.ViewModels;
 using CommonLib.Util.Authentications;
 using MvcContrib;
-using NHibernate;
 using SharpArch.NHibernate.Web.Mvc;
 
 namespace BeautySalonManagement.Web.Mvc.Controllers
 {
 	public class LoginController : CustomControllerBase
 	{
-		readonly ICustomFormsAuthentication CustomFormsAuthentication;
+		readonly ICustomFormsAuthentication _customFormsAuthentication;
 		readonly IEmployeeTasks _employeeTasks;
 		//
 		// GET: /Login/
 		public LoginController(IEmployeeTasks employeeTasks, ICustomFormsAuthentication customFormsAuthentication)
 		{
 			_employeeTasks = employeeTasks;
-			CustomFormsAuthentication = customFormsAuthentication;
+			_customFormsAuthentication = customFormsAuthentication;
 		}
 
 		[HttpGet]
@@ -44,7 +43,7 @@ namespace BeautySalonManagement.Web.Mvc.Controllers
 				if (employee != null)
 				{
 					DomainSession.Current.People = employee;
-					CustomFormsAuthentication.SetAuthCookie(DomainSession.Current.People.Name, false);
+					_customFormsAuthentication.SetAuthCookie(DomainSession.Current.People.Name, false);
 					return this.RedirectToAction<HomeController>(x => x.Index());
 				}
 				ModelState.AddModelError("", "登录失败!");

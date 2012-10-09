@@ -1,6 +1,7 @@
 ﻿using BeautySalonManagement.Domain.Articles;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Automapping.Alterations;
+using FluentNHibernate.Mapping;
 
 namespace BeautySalonManagement.Infrastructure.NHibernateMaps.CustomMap
 {
@@ -12,7 +13,7 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps.CustomMap
 		{
 			mapping.Table("tblServices");
 			mapping.UseUnionSubclassForInheritanceMapping();
-			mapping.HasManyToMany(x => x.Items).Access.CamelCaseField().AsSet().LazyLoad().Cascade.SaveUpdate().Table("tblServiceAndItems");
+			mapping.HasManyToMany(x => x.Items).Access.ReadOnlyPropertyThroughLowerCaseField(Prefix.Underscore).AsSet().LazyLoad().Cascade.SaveUpdate().Table("tblServiceAndItems");
 		}
 
 		#endregion
