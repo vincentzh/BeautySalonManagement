@@ -9,7 +9,7 @@ namespace BeautySalonManagement.Domain
 	/// </summary>
 	public class DomainSession
 	{
-		static readonly SessionData<DomainSession> instance = new SessionData<DomainSession>();
+		static readonly SessionData<DomainSession> Instance = new SessionData<DomainSession>();
 
 		/// <summary>
 		/// get the current domainLayer object, that is related to current session
@@ -18,12 +18,12 @@ namespace BeautySalonManagement.Domain
 		{
 			get
 			{
-				if (instance.Value == null)
-					instance.Value = DomainSetting.GetInstanceFromConfig<DomainSession>("DomainSessionType",
+				if (Instance.Value == null)
+					Instance.Value = DomainSetting.GetInstanceFromConfig<DomainSession>("DomainSessionType",
 					                                                                    typeof (
 					                                                                    		DomainSession
 					                                                                    		));
-				return instance.Value;
+				return Instance.Value;
 			}
 		}
 

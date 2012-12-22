@@ -112,6 +112,8 @@
     <Compile Include="Commands\Articles\EditBrandCommand.cs" />
     <Compile Include="Commands\Articles\EditEquipmentCommand.cs" />
     <Compile Include="Commands\Articles\EquipmentCommandBase.cs" />
+    <Compile Include="Commands\Businesses\AddReservationCommand.cs" />
+    <Compile Include="Commands\Businesses\ReservationCommandBase.cs" />
     <Compile Include="Commands\Employees\AddEmployeeCommand.cs" />
     <Compile Include="Commands\Employees\EditEmployeeCommand.cs" />
     <Compile Include="Commands\Employees\EmployeeCommandBase.cs" />
@@ -125,6 +127,7 @@
     <Compile Include="EmployeeTasks.cs" />
     <Compile Include="EquimentTasks.cs" />
     <Compile Include="ItemTasks.cs" />
+    <Compile Include="ReservationTasks.cs" />
     <Compile Include="ServiceTasks.cs" />
   </ItemGroup>
   <ItemGroup>

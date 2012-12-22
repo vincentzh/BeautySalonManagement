@@ -8,7 +8,7 @@ using SharpArch.Domain.DomainModel;
 
 namespace BeautySalonManagement.Domain.Businesses
 {
-	public class Reservations:Entity
+	public class Reservation:Entity
 	{
 		public virtual DateTime Appointment   { get; set; }
 		public virtual Customer Customer { get; set; }

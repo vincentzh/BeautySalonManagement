@@ -9,8 +9,8 @@ namespace BeautySalonManagement.Domain
 	{
 		public static T GetInstanceFromConfig<T>(string key, Type defaultType)
 		{
-			Type t = defaultType;
-			string tn = ConfigurationManager.GetSetting(key, string.Empty);
+			var t = defaultType;
+			var tn = ConfigurationManager.GetSetting(key, string.Empty);
 			if (!string.IsNullOrEmpty(tn))
 				t = Type.GetType(tn);
 			if (t == null)

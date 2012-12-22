@@ -27,7 +27,7 @@ namespace BeautySalonManagement.Infrastructure.NHibernateMaps
 
 			mappings.Conventions.Setup(GetConventions());
 			mappings.UseOverridesFromAssemblyOf<AutoPersistenceModelGenerator>();
-			mappings.WriteMappingsTo(@"C:\mappings");
+			mappings.WriteMappingsTo(@"d:\mappings");
 			return mappings;
 		}
 

@@ -110,13 +110,14 @@
     </Compile>
     <Compile Include="Articles\Equipment.cs" />
     <Compile Include="Articles\SaleInfo.cs" />
-    <Compile Include="Businesses\Reservations.cs" />
+    <Compile Include="Businesses\Reservation.cs" />
     <Compile Include="Contracts\Tasks\IBrandTasks.cs" />
     <Compile Include="Contracts\Tasks\ICustomerTasks.cs" />
     <Compile Include="Contracts\Tasks\IEmployeeTasks.cs" />
     <Compile Include="Contracts\Tasks\IEquipmentTasks.cs" />
     <Compile Include="Contracts\Tasks\IPersonTasks.cs" />
     <Compile Include="Contracts\Tasks\IItemTasks.cs" />
+    <Compile Include="Contracts\Tasks\IReservationTasks.cs" />
     <Compile Include="Contracts\Tasks\IServiceTasks.cs" />
     <Compile Include="DomainSession.cs" />
     <Compile Include="DomainSetting.cs" />

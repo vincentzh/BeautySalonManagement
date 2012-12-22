@@ -113,6 +113,7 @@
     <Compile Include="NHibernateMaps\CustomMap\EmployeeMap.cs" />
     <Compile Include="NHibernateMaps\CustomMap\ItemMap.cs" />
     <Compile Include="NHibernateMaps\CustomMap\PeopleMap.cs" />
+    <Compile Include="NHibernateMaps\CustomMap\ReservationMap.cs" />
     <Compile Include="NHibernateMaps\CustomMap\SaleInfoMap.cs" />
     <Compile Include="NHibernateMaps\CustomMap\ServiceMap.cs" />
   </ItemGroup>
